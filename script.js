@@ -1,510 +1,69 @@
 const slides = [
 {
-  title:"Title",
-  kicker:"Master Thesis • EMIX • July 2026",
-  notes:`Open by naming the research problem and the central question. Emphasize that the study compares two versions of the same game environment and changes the interface behavior, not the core game logic. Transition to why early churn matters.`,
-  html:`
-    <div class="slide-card">
-      <div class="title-layout">
-        <div>
-          <div class="eyebrow">Web-Based Academic Research Defense</div>
-          <div class="small-gap"></div>
-          <h1>The Impact of Adaptive User Interfaces on Player Retention in Mobile Games</h1>
-          <div class="small-gap"></div>
-          <p class="subhead">A rule-based adaptive interface is evaluated against a traditional static interface inside a controlled web-based mobile game prototype.</p>
-          <div class="title-meta">
-            <div class="panel"><div class="label">Researcher</div><strong>Mohammed Ali ALOUFI</strong></div>
-            <div class="panel"><div class="label">Supervisor</div><strong>Mr. Mohammed Al-Nazli</strong></div>
-            <div class="panel"><div class="label">Program</div><strong>Master of Executive UI/UX Design and Game Technologies (EMIX)</strong></div>
-            <div class="panel"><div class="label">Institution</div><strong>Anas Academy</strong></div>
-          </div>
-        </div>
-        <div class="panel soft stack center">
-          <div class="phone" aria-label="Illustrative mobile-game interface">
-            <div class="status"><span>5G 100%</span><span>09:41</span></div>
-            <div class="screen-top"><span>Adaptive test</span><span>00:50</span></div>
-            <div class="arena"><div class="player"></div><div class="target"></div></div>
-            <div class="tip">Target fits: brief contextual hint</div>
-            <div class="controls-row"><div class="control">↗<br/>Move</div><div class="control highlight">↑<br/>Jump</div></div>
-          </div>
-          <div class="source-note">Illustrative visual representation of the prototype described in the thesis.</div>
-        </div>
-      </div>
-      <div class="slide-footer"><span>Source: thesis title page & abstract</span><span class="section-number">01</span></div>
-    </div>`
+title:'العنوان', kicker:'مناقشة بحث الماجستير • EMIX • يوليو 2026', notes:'ابدأ بتسمية موضوع البحث والسؤال المركزي. وضّح أن الدراسة تقارن بين نسختين من البيئة نفسها، وأن التغيير الأساسي يقع في سلوك واجهة المستخدم وليس في منطق اللعبة.', html:'<div class="slide-card">\n<div class="title-layout">\n<div>\n<div class="eyebrow">مناقشة أكاديمية عبر الويب</div>\n<h1>أثر واجهات المستخدم التكيفية على معدل احتفاظ اللاعبين في ألعاب الهاتف المحمول</h1>\n<p class="subhead">تقييم واجهة مستخدم تكيفية قائمة على القواعد مقارنة بواجهة تقليدية ثابتة داخل نموذج أولي تفاعلي للعبة هاتف محمول يعمل عبر المتصفح.</p>\n<div class="title-meta">\n<div class="panel"><div class="label">الباحث</div><strong>Mohammed Ali ALOUFI</strong></div>\n<div class="panel"><div class="label">المشرف</div><strong>Mr. Mohammed Al-Nazli</strong></div>\n<div class="panel"><div class="label">البرنامج</div><strong>ماجستير تنفيذي في تصميم واجهة وتجربة المستخدم وتقنيات الألعاب (EMIX)</strong></div>\n<div class="panel"><div class="label">الجهة</div><strong>أكاديمية أنس للفنون</strong></div>\n</div>\n</div>\n<div class="panel soft stack center">\n<div class="phone">\n<div class="status"><span>5G 100%</span><span>09:41</span></div>\n<div class="screen-top"><span>واجهة تكيفية</span><span>00:50</span></div>\n<div class="arena"><div class="player"></div><div class="target"></div></div>\n<div class="tip">تلميح مختصر عند الحاجة</div>\n<div class="controls-row"><div class="control">↗<br/>حركة</div><div class="control highlight">↑<br/>قفز</div></div>\n</div>\n<div class="source-note">تمثيل بصري مبسط للنموذج الأولي الوارد في البحث.</div>\n</div>\n</div>\n<div class="slide-footer"><span>المصدر: صفحة العنوان والملخص</span><span class="section-number">01</span></div>\n</div>'
 },
 {
-  title:"Research Question",
-  kicker:"The question that organizes the study",
-  notes:`State the exact research question. Do not broaden it. The thesis asks about the effect of adaptive user interfaces on player retention in mobile games. The practical evaluation uses retention intention alongside usability and performance indicators because the experiment is a single session.`,
-  html:`
-    <div class="slide-card">
-      <div class="section-head"><div><div class="eyebrow">01 • Framing</div><h2>One question drives the defense</h2></div><span class="pill">Research Question</span></div>
-      <div class="callout"><p class="quote">“What is the effect of using Adaptive User Interfaces (AUIs) on player retention in mobile games?”</p></div>
-      <div class="grid-3">
-        <div class="panel"><div class="label">Independent variable</div><h3>User interface type</h3><p class="muted">Traditional static vs. rule-based adaptive.</p></div>
-        <div class="panel"><div class="label">Performance signals</div><h3>Interaction evidence</h3><p class="muted">Task time, errors, incorrect clicks, adaptation activations, and final performance.</p></div>
-        <div class="panel good"><div class="label">Retention proxy</div><h3>Intention to continue</h3><p class="muted">Used because the study evaluates a single experimental session.</p></div>
-      </div>
-      <div class="slide-footer"><span>Source: pp. 3–4, 10, 14–15</span><span class="section-number">02</span></div>
-    </div>`
+title:'سؤال البحث', kicker:'السؤال الذي ينظم الدراسة', notes:'اذكر سؤال البحث كما ورد في الرسالة. ثم وضّح أن الدراسة تستخدم مؤشرات أداء وقابلية استخدام ونية الاستمرار، لأن التجربة تمت في جلسة واحدة.', html:'<div class="slide-card">\n<div class="section-head"><div><div class="eyebrow">01 • الإطار العام</div><h2>سؤال واحد يقود الدراسة</h2></div><span class="pill">سؤال البحث</span></div>\n<div class="callout"><p class="quote">«ما أثر استخدام واجهات المستخدم التكيفية (AUIs) على معدل احتفاظ اللاعبين في ألعاب الهاتف المحمول؟»</p></div>\n<div class="grid-3">\n<div class="panel"><div class="label">المتغير المستقل</div><h3>نوع واجهة المستخدم</h3><p class="muted">واجهة تقليدية ثابتة مقابل واجهة تكيفية قائمة على القواعد.</p></div>\n<div class="panel"><div class="label">مؤشرات الأداء</div><h3>أدلة التفاعل</h3><p class="muted">زمن المهمة، الأخطاء، النقرات غير الصحيحة، وعدد مرات تفعيل التكيف، ومؤشر الأداء النهائي.</p></div>\n<div class="panel good"><div class="label">مؤشر الاحتفاظ</div><h3>نية الاستمرار</h3><p class="muted">استخدمت كمؤشر للاحتفاظ بسبب اعتماد الدراسة على جلسة تجريبية واحدة.</p></div>\n</div>\n<div class="slide-footer"><span>المصدر: ص 3–4، 10، 14–15</span><span class="section-number">02</span></div>\n</div>'
 },
 {
-  title:"The Problem",
-  kicker:"Why a static interface can become a barrier",
-  notes:`Explain the asymmetry: novice players may struggle with a fixed interface because they must process more information than they need, while experienced players may find the same interface insufficiently flexible or challenging. The thesis frames early churn as the practical problem.`,
-  html:`
-    <div class="slide-card">
-      <div class="section-head"><div><div class="eyebrow">02 • The Problem</div><h2>A one-size-fits-all interface meets non-identical players</h2></div><span class="pill">Early churn</span></div>
-      <div class="grid-2">
-        <div class="stack">
-          <div class="panel warn"><div class="label">Novice player</div><h3>Too much to process</h3><p class="muted">Static controls and information can raise extraneous cognitive load, making interaction harder and increasing the risk of errors or early disengagement.</p></div>
-          <div class="panel"><div class="label">Experienced player</div><h3>Too little flexibility</h3><p class="muted">A fixed interface may not adapt to the player's performance level, potentially reducing engagement and motivation.</p></div>
-        </div>
-        <div class="center">
-          <div class="stack" style="width:min(520px,100%)">
-            <div class="panel soft"><div class="rule-line"><span class="rule-dot"></span><strong>Same UI</strong></div><p class="muted">Same control size • same placement • no adaptive guidance</p></div>
-            <div class="center muted">↓</div>
-            <div class="panel"><div class="rule-line"><span class="rule-dot"></span><strong>Different player states</strong></div><p class="muted">Different experience • skill • speed of learning • interaction patterns</p></div>
-            <div class="center muted">↓</div>
-            <div class="panel warn"><div class="rule-line"><span class="rule-dot"></span><strong>Possible early churn</strong></div><p class="muted">The thesis investigates whether adaptive UI can reduce these interaction barriers.</p></div>
-          </div>
-        </div>
-      </div>
-      <div class="slide-footer"><span>Source: pp. 2–3</span><span class="section-number">03</span></div>
-    </div>`
+title:'مشكلة البحث', kicker:'لماذا قد تصبح الواجهة الثابتة عائقًا؟', notes:'وضّح المفارقة: اللاعب المبتدئ قد يواجه عبئًا معرفيًا أعلى، بينما قد يجد اللاعب ذو الخبرة الواجهة أقل مرونة من احتياجاته. المشكلة العملية التي يناقشها البحث هي التسرب المبكر.', html:'<div class="slide-card">\n<div class="section-head"><div><div class="eyebrow">02 • المشكلة</div><h2>واجهة واحدة لا تناسب جميع اللاعبين</h2></div><span class="pill">التسرب المبكر</span></div>\n<div class="grid-2">\n<div class="stack">\n<div class="panel warn"><div class="label">اللاعب المبتدئ</div><h3>معلومات أكثر مما يحتاج</h3><p class="muted">واجهة ثابتة وكثيفة قد ترفع العبء المعرفي وتزيد صعوبة التفاعل واحتمال ارتكاب الأخطاء أو الانقطاع المبكر.</p></div>\n<div class="panel"><div class="label">اللاعب ذو الخبرة</div><h3>مرونة أقل</h3><p class="muted">قد لا تقدم الواجهة الثابتة مستوى كافيًا من التكيف أو المرونة، بما قد يضعف الدافعية للاستمرار.</p></div>\n</div>\n<div class="center">\n<div class="stack" style="width:min(520px,100%)">\n<div class="panel soft"><div class="rule-line"><span class="rule-dot"></span><strong>واجهة واحدة للجميع</strong></div><p class="muted">الحجم والموقع ثابتان • لا توجد مساعدة تكيفية</p></div>\n<div class="center muted">↓</div>\n<div class="panel"><div class="rule-line"><span class="rule-dot"></span><strong>حالات لاعبين مختلفة</strong></div><p class="muted">خبرة • مهارة • سرعة تعلم • أنماط تفاعل مختلفة</p></div>\n<div class="center muted">↓</div>\n<div class="panel warn"><div class="rule-line"><span class="rule-dot"></span><strong>احتمال التسرب المبكر</strong></div><p class="muted">الدراسة تختبر هل يمكن للواجهة التكيفية تقليل هذه الحواجز.</p></div>\n</div>\n</div>\n</div>\n<div class="slide-footer"><span>المصدر: ص 2–3</span><span class="section-number">03</span></div>\n</div>'
 },
 {
-  title:"Study Logic",
-  kicker:"Problem → theory → intervention → evaluation",
-  notes:`Use this slide to orient the committee. The thesis connects interface design to cognitive load and flow, then operationalizes the idea through a rule-based adaptive engine. The evaluation compares the adaptive and static versions under the same gameplay conditions.`,
-  html:`
-    <div class="slide-card">
-      <div class="eyebrow">03 • Research Logic</div>
-      <h2>The argument is intentionally testable</h2>
-      <div class="flow">
-        <div class="flow-box"><b>Problem</b><div class="muted">Early churn + fixed UI</div></div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-box"><b>Theory</b><div class="muted">Cognitive Load + Flow</div></div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-box"><b>Intervention</b><div class="muted">Rule-based adaptive UI</div></div>
-      </div>
-      <div class="flow">
-        <div class="flow-box"><b>Measure</b><div class="muted">Task time + errors + adaptation + retention intention</div></div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-box"><b>Compare</b><div class="muted">Static vs. adaptive</div></div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-box soft"><b>Conclusion</b><div class="muted">Adaptive interface showed stronger reported usability outcomes</div></div>
-      </div>
-      <div class="callout"><p class="muted">The thesis keeps gameplay constant so the difference can be attributed to the interface and its response to player performance.</p></div>
-      <div class="slide-footer"><span>Source: pp. 8–10, 14–15</span><span class="section-number">04</span></div>
-    </div>`
+title:'منطق الدراسة', kicker:'المشكلة ← النظرية ← التدخل ← التقييم', notes:'استخدم هذه الشريحة لتوضيح قصة البحث أمام اللجنة: مشكلة التسرب والواجهة الثابتة، ثم الأساس النظري، ثم محرك التكيف القائم على القواعد، ثم التقييم والمقارنة.', html:'<div class="slide-card">\n<div class="eyebrow">03 • منطق الدراسة</div>\n<h2>سلسلة بحث قابلة للاختبار</h2>\n<div class="flow">\n<div class="flow-box"><b>المشكلة</b><div class="muted">التسرب المبكر + واجهة ثابتة</div></div><div class="flow-arrow">←</div>\n<div class="flow-box"><b>الأساس النظري</b><div class="muted">العبء المعرفي + التدفق</div></div><div class="flow-arrow">←</div>\n<div class="flow-box"><b>التدخل</b><div class="muted">واجهة تكيفية قائمة على القواعد</div></div>\n</div>\n<div class="flow">\n<div class="flow-box"><b>القياس</b><div class="muted">زمن المهمة + الأخطاء + التكيف + نية الاستمرار</div></div><div class="flow-arrow">←</div>\n<div class="flow-box"><b>المقارنة</b><div class="muted">ثابتة مقابل تكيفية</div></div><div class="flow-arrow">←</div>\n<div class="flow-box soft"><b>الخلاصة</b><div class="muted">تحسن اتجاهي في مؤشرات تجربة الاستخدام</div></div>\n</div>\n<div class="callout"><p class="muted">تم الإبقاء على آلية اللعب ومهام التجربة ثابتة، بحيث يكون الاختلاف الأساسي في الواجهة واستجابتها لأداء اللاعب.</p></div>\n<div class="slide-footer"><span>المصدر: ص 8–10، 14–15</span><span class="section-number">04</span></div>\n</div>'
 },
 {
-  title:"Theoretical Foundation",
-  kicker:"Two theories explain why adaptation should help",
-  notes:`Explain Cognitive Load Theory first: working memory is limited, and unnecessary interface complexity can create extraneous load. Then Flow Theory: engagement is supported when challenge and skill are balanced. The adaptive UI is positioned as a way to adjust interface support without changing the game itself.`,
-  html:`
-    <div class="slide-card">
-      <div class="section-head"><div><div class="eyebrow">04 • Theory</div><h2>Two lenses: reduce friction, protect flow</h2></div><span class="pill">CLT + Flow</span></div>
-      <div class="grid-2">
-        <div class="panel soft">
-          <div class="label">Cognitive Load Theory</div>
-          <h3>Reduce extraneous load</h3>
-          <p class="muted" style="margin-top:8px">A crowded or overly complex UI can consume working-memory capacity without helping the player understand the task.</p>
-          <div class="tag-row" style="margin-top:15px"><span class="tag">Simplify</span><span class="tag">Prioritize</span><span class="tag">Guide when needed</span></div>
-        </div>
-        <div class="panel">
-          <div class="label">Flow Theory</div>
-          <h3>Support challenge–skill balance</h3>
-          <p class="muted" style="margin-top:8px">If challenge exceeds skill, frustration can rise; if challenge is too low, boredom can rise. Adaptive support is framed as a way to maintain engagement.</p>
-          <div class="tag-row" style="margin-top:15px"><span class="tag">Responsive support</span><span class="tag">Contextual help</span><span class="tag">Progressive reduction</span></div>
-        </div>
-      </div>
-      <div class="panel"><div class="label">Design implication</div><h3>Adapt the interface, not the rules of the game</h3><p class="muted">The prototype changes interface elements according to observed performance while keeping the underlying gameplay stable.</p></div>
-      <div class="slide-footer"><span>Source: pp. 8–10</span><span class="section-number">05</span></div>
-    </div>`
+title:'الأساس النظري', kicker:'نظرية العبء المعرفي + نظرية التدفق', notes:'اشرح النظريتين ثم اربطهما مباشرة بالتدخل: تقليل الجهد غير الضروري عبر تبسيط الواجهة والمساعدة عند الحاجة، ودعم توازن التحدي والمهارة من خلال استجابة الواجهة لأداء اللاعب.', html:'<div class="slide-card">\n<div class="section-head"><div><div class="eyebrow">04 • الأساس النظري</div><h2>عدستان تفسران فائدة التكيف</h2></div><span class="pill">CLT + Flow</span></div>\n<div class="grid-2">\n<div class="panel soft"><div class="label">نظرية العبء المعرفي</div><h3>تقليل العبء المعرفي الدخيل</h3><p class="muted" style="margin-top:8px">زيادة المعلومات أو التعقيد غير الضروري قد تستهلك قدرة الذاكرة العاملة وتشتت اللاعب عن المهمة الأساسية.</p><div class="tag-row" style="margin-top:15px"><span class="tag">تبسيط</span><span class="tag">إبراز المهم</span><span class="tag">مساعدة عند الحاجة</span></div></div>\n<div class="panel"><div class="label">نظرية التدفق</div><h3>دعم توازن التحدي والمهارة</h3><p class="muted" style="margin-top:8px">إذا تجاوز التحدي قدرة اللاعب قد يظهر الإحباط، وإذا انخفض كثيرًا قد يظهر الملل. التكيف يدعم تجربة أكثر استجابة.</p><div class="tag-row" style="margin-top:15px"><span class="tag">دعم استجابي</span><span class="tag">مساعدة سياقية</span><span class="tag">تقليل تدريجي</span></div></div>\n</div>\n<div class="panel"><div class="label">النتيجة التصميمية</div><h3>التكيف في الواجهة وليس في منطق اللعبة</h3><p class="muted">النموذج يغير عناصر واجهة المستخدم وفق الأداء، مع الحفاظ على آلية اللعب الأساسية ثابتة.</p></div>\n<div class="slide-footer"><span>المصدر: ص 8–10</span><span class="section-number">05</span></div>\n</div>'
 },
 {
-  title:"Previous Studies",
-  kicker:"What the literature already established",
-  notes:`Summarize the cited studies without overstating them. Putkonen focused on early player behavior and retention prediction; Tondello on personalization; Padte on adaptive textual feedback; Makris on runtime technical challenges; Chen and colleagues on churn prediction using performance data. Then move to the missing link.`,
-  html:`
-    <div class="slide-card">
-      <div class="section-head"><div><div class="eyebrow">05 • Related Work</div><h2>The literature supports adaptation — but from different angles</h2></div><span class="pill">5 highlighted studies</span></div>
-      <div class="grid-3">
-        <div class="panel"><h3>Putkonen (2022)</h3><p class="muted">Early player behavior as a predictor of retention in free-to-play mobile games.</p></div>
-        <div class="panel"><h3>Tondello (2019)</h3><p class="muted">Dynamic personalization of interactive systems according to player types.</p></div>
-        <div class="panel"><h3>Padte (2019)</h3><p class="muted">Adaptive textual feedback and player engagement in endless runners.</p></div>
-        <div class="panel"><h3>Makris (2016)</h3><p class="muted">Runtime implementation challenges for adaptive user interfaces.</p></div>
-        <div class="panel"><h3>Chen et al. (2021)</h3><p class="muted">Performance data used to predict churn and support customization.</p></div>
-        <div class="panel soft"><div class="label">Pattern</div><h3>Adaptation is promising</h3><p class="muted">The thesis builds a direct, simple, rule-based interface intervention inside a mobile-game prototype.</p></div>
-      </div>
-      <div class="slide-footer"><span>Source: p. 11 + References</span><span class="section-number">06</span></div>
-    </div>`
+title:'الدراسات السابقة', kicker:'ماذا قالت الأدبيات قبل هذه الدراسة؟', notes:'قدّم الدراسات الخمس باختصار، ثم انتقل إلى أن الأدبيات تدعم التخصيص والتكيف، لكن الدراسة الحالية تركز مباشرة على عناصر واجهة المستخدم نفسها باستخدام قواعد بسيطة قابلة للتطبيق.', html:'<div class="slide-card">\n<div class="section-head"><div><div class="eyebrow">05 • الدراسات السابقة</div><h2>الأدبيات تدعم التكيف من زوايا متعددة</h2></div><span class="pill">5 دراسات بارزة</span></div>\n<div class="grid-3">\n<div class="panel"><h3>Putkonen (2022)</h3><p class="muted">سلوك اللاعب المبكر كمؤشر للتنبؤ بالاحتفاظ في ألعاب الهاتف المجانية.</p></div>\n<div class="panel"><h3>Tondello (2019)</h3><p class="muted">التخصيص الديناميكي للأنظمة التفاعلية وفق أنواع اللاعبين.</p></div>\n<div class="panel"><h3>Padte (2019)</h3><p class="muted">أثر التغذية الراجعة النصية التكيفية على التفاعل والاستمرار.</p></div>\n<div class="panel"><h3>Makris (2016)</h3><p class="muted">التحديات التقنية لتطبيق الواجهات التكيفية وقت التشغيل.</p></div>\n<div class="panel"><h3>Chen et al. (2021)</h3><p class="muted">استخدام بيانات الأداء للتنبؤ بالانسحاب وتخصيص تجربة اللعب.</p></div>\n<div class="panel soft"><div class="label">المشترك</div><h3>التكيف واعد</h3><p class="muted">الدراسة الحالية تنقل الفكرة إلى تدخل مباشر داخل واجهة لعبة هاتف محمول باستخدام قواعد تفاعلية واضحة.</p></div>\n</div>\n<div class="slide-footer"><span>المصدر: ص 11 وقائمة المراجع</span><span class="section-number">06</span></div>\n</div>'
 },
 {
-  title:"Research Gap",
-  kicker:"The contribution begins where the literature narrows",
-  notes:`Stress the precise gap from the thesis: prior studies often analyzed player behavior, predicted retention, or personalized the broader gameplay experience. The current study focuses directly on adaptive UI elements in a mobile game using simple, implementable interactive rules and expert evaluation.`,
-  html:`
-    <div class="slide-card">
-      <div class="eyebrow">06 • Gap</div>
-      <h2>The missing link is the interface itself</h2>
-      <div class="grid-2">
-        <div class="panel">
-          <div class="label">Prior focus</div>
-          <div class="bullet-list" style="margin-top:12px">
-            <div class="bullet">Player behavior analysis</div>
-            <div class="bullet">Retention prediction</div>
-            <div class="bullet">General personalization</div>
-          </div>
-        </div>
-        <div class="panel good">
-          <div class="label">This study</div>
-          <div class="bullet-list" style="margin-top:12px">
-            <div class="bullet">Directly adapts UI elements</div>
-            <div class="bullet">Uses explicit if–then rules</div>
-            <div class="bullet">Compares adaptive vs. static versions</div>
-            <div class="bullet">Evaluates usability and performance indicators</div>
-          </div>
-        </div>
-      </div>
-      <div class="callout"><p class="quote">Contribution claim: a practical, explainable rule-based adaptation approach for mobile-game interfaces.</p></div>
-      <div class="slide-footer"><span>Source: pp. 11–12</span><span class="section-number">07</span></div>
-    </div>`
+title:'الفجوة البحثية', kicker:'المفقود هو الواجهة نفسها', notes:'شدّد على الفجوة كما صيغت في البحث: دراسات سابقة ركزت على سلوك اللاعب أو التنبؤ بالاحتفاظ أو التخصيص العام، بينما تركز الدراسة الحالية مباشرة على تكييف عناصر الواجهة نفسها.', html:'<div class="slide-card">\n<div class="eyebrow">06 • الفجوة البحثية</div>\n<h2>الدراسة تضع واجهة المستخدم في مركز التدخل</h2>\n<div class="grid-2">\n<div class="panel"><div class="label">تركيز سابق</div><div class="bullet-list" style="margin-top:12px"><div class="bullet">تحليل سلوك اللاعبين</div><div class="bullet">التنبؤ بالاحتفاظ</div><div class="bullet">التخصيص العام لتجربة اللعب</div></div></div>\n<div class="panel good"><div class="label">الدراسة الحالية</div><div class="bullet-list" style="margin-top:12px"><div class="bullet">تكييف عناصر الواجهة مباشرة</div><div class="bullet">قواعد إذا–فإن واضحة</div><div class="bullet">مقارنة تكيفية مقابل ثابتة</div><div class="bullet">تقييم قابلية الاستخدام والأداء</div></div></div>\n</div>\n<div class="callout"><p class="quote">الإضافة العملية: أسلوب تكيف قائم على القواعد، واضح وقابل لإعادة التنفيذ، لتغيير الواجهة وفق أداء اللاعب.</p></div>\n<div class="slide-footer"><span>المصدر: ص 11–12</span><span class="section-number">07</span></div>\n</div>'
 },
 {
-  title:"Methodology",
-  kicker:"A quasi-experimental comparison inside one prototype",
-  notes:`Define the independent variable clearly: the type of user interface. The dependent indicators include task completion time, errors, adaptation activations, usability evaluation, and intention to continue. Explain that the two versions share the same gameplay and tasks.`,
-  html:`
-    <div class="slide-card">
-      <div class="section-head"><div><div class="eyebrow">07 • Methodology</div><h2>Quasi-experimental design</h2></div><span class="pill">Controlled comparison</span></div>
-      <div class="grid-2">
-        <div class="stack">
-          <div class="panel soft"><div class="label">Independent variable</div><h3>UI type</h3><p class="muted">Traditional static interface vs. rule-based adaptive interface.</p></div>
-          <div class="panel"><div class="label">Dependent indicators</div><h3>Performance + usability + retention intention</h3><p class="muted">Task time, errors, adaptation activations, usability assessment, and intention to continue.</p></div>
-        </div>
-        <div class="panel center">
-          <div class="choice" style="width:100%">
-            <div class="side static"><h3>Version A</h3><p class="muted">Traditional static UI</p><div class="tag-row" style="margin-top:14px"><span class="tag">Fixed size</span><span class="tag">Fixed position</span><span class="tag">No adaptive hints</span></div></div>
-            <div class="side adaptive"><h3>Version B</h3><p class="muted">Rule-based adaptive UI</p><div class="tag-row" style="margin-top:14px"><span class="tag">Performance-aware</span><span class="tag">Contextual help</span><span class="tag">UI changes</span></div></div>
-          </div>
-        </div>
-      </div>
-      <div class="slide-footer"><span>Source: pp. 14–15</span><span class="section-number">08</span></div>
-    </div>`
+title:'المنهجية', kicker:'تصميم شبه تجريبي', notes:'عرّف المتغير المستقل والمتغيرات التابعة، ثم وضّح أن النسختين متطابقتان في محتوى اللعبة ومهامها، وأن الاختلاف الأساسي هو نوع الواجهة واستجابتها للأداء.', html:'<div class="slide-card">\n<div class="section-head"><div><div class="eyebrow">07 • المنهجية</div><h2>مقارنة شبه تجريبية داخل النموذج نفسه</h2></div><span class="pill">مقارنة مضبوطة</span></div>\n<div class="grid-2">\n<div class="stack">\n<div class="panel soft"><div class="label">المتغير المستقل</div><h3>نوع واجهة المستخدم</h3><p class="muted">واجهة تقليدية ثابتة مقابل واجهة تكيفية قائمة على القواعد.</p></div>\n<div class="panel"><div class="label">المتغيرات التابعة / المؤشرات</div><h3>الأداء + قابلية الاستخدام + نية الاستمرار</h3><p class="muted">زمن المهمة، الأخطاء، تفعيل التكيف، التقييم الإرشادي، ونية الاستمرار.</p></div>\n</div>\n<div class="panel center"><div class="choice" style="width:100%">\n<div class="side static"><h3>النسخة A</h3><p class="muted">واجهة تقليدية ثابتة</p><div class="tag-row" style="margin-top:14px"><span class="tag">حجم ثابت</span><span class="tag">موضع ثابت</span><span class="tag">لا تلميحات تكيفية</span></div></div>\n<div class="side adaptive"><h3>النسخة B</h3><p class="muted">واجهة تكيفية</p><div class="tag-row" style="margin-top:14px"><span class="tag">مراقبة الأداء</span><span class="tag">مساعدة سياقية</span><span class="tag">تعديلات على الواجهة</span></div></div>\n</div></div>\n</div>\n<div class="slide-footer"><span>المصدر: ص 14–15</span><span class="section-number">08</span></div>\n</div>'
 },
 {
-  title:"Participants",
-  kicker:"Purposive expert sample",
-  notes:`The abstract identifies eight UI/UX and game-development experts from the Emerging Technologies and Virtual Worlds Bootcamp at Tuwaiq Academy in Saudi Arabia. The method section describes purposive sampling and a unified procedure where all participants used both versions.`,
-  html:`
-    <div class="slide-card">
-      <div class="eyebrow">08 • Participants</div>
-      <div class="grid-2">
-        <div class="panel soft center" style="min-height:270px">
-          <div><div class="big-num">8</div><div class="label" style="margin-top:9px">Participants</div><p class="muted" style="margin-top:9px">UI/UX + game-development experts</p></div>
-        </div>
-        <div class="stack">
-          <div class="panel"><div class="label">Sampling</div><h3>Purposive</h3><p class="muted">Selected for relevant expertise to evaluate prototype quality and adaptive behavior.</p></div>
-          <div class="panel"><div class="label">Context</div><h3>Tuwaiq Academy</h3><p class="muted">Emerging Technologies and Virtual Worlds Bootcamp, Saudi Arabia.</p></div>
-          <div class="panel"><div class="label">Comparison procedure</div><h3>Both versions used</h3><p class="muted">Participants experienced the traditional and adaptive versions under standardized procedures.</p></div>
-        </div>
-      </div>
-      <div class="slide-footer"><span>Source: pp. 2, 15</span><span class="section-number">09</span></div>
-    </div>`
+title:'العينة', kicker:'عينة قصدية من المختصين', notes:'العينة في الملخص هي ثمانية خبراء من مجالات UI/UX وتطوير الألعاب، من معسكر التقنيات الناشئة والعوالم الافتراضية بأكاديمية طويق. وضّح أن جميع المشاركين استخدموا النسختين وفق إجراءات موحدة.', html:'<div class="slide-card">\n<div class="eyebrow">08 • المشاركون</div>\n<div class="grid-2">\n<div class="panel soft center" style="min-height:270px"><div><div class="big-num">8</div><div class="label" style="margin-top:9px">مشاركون</div><p class="muted" style="margin-top:9px">مختصون في UI/UX وتطوير الألعاب</p></div></div>\n<div class="stack">\n<div class="panel"><div class="label">أسلوب الاختيار</div><h3>العينة القصدية</h3><p class="muted">اختيار مشاركين ذوي خبرة مناسبة لتقييم جودة النموذج وفاعلية التكيف.</p></div>\n<div class="panel"><div class="label">السياق</div><h3>أكاديمية طويق</h3><p class="muted">معسكر التقنيات الناشئة والعوالم الافتراضية في المملكة العربية السعودية.</p></div>\n<div class="panel"><div class="label">المقارنة</div><h3>استخدام النسختين</h3><p class="muted">استخدم جميع المشاركين النسخة التقليدية والنسخة التكيفية وفق إجراءات موحدة.</p></div>\n</div>\n</div>\n<div class="slide-footer"><span>المصدر: ص 2، 15</span><span class="section-number">09</span></div>\n</div>'
 },
 {
-  title:"Prototype",
-  kicker:"Same game, two interface behaviors",
-  notes:`Describe the prototype screens documented in the thesis: start screen, version selection, gameplay, final performance report, and adaptive guidance messages. The visual examples here are deliberately recreated as simplified presentation graphics rather than pretending to be the original screenshots.`,
-  html:`
-    <div class="slide-card">
-      <div class="section-head"><div><div class="eyebrow">09 • Prototype</div><h2>The experimental environment</h2></div><span class="pill">HTML • CSS • JavaScript</span></div>
-      <div class="grid-3">
-        <div class="panel center stack"><div class="phone"><div class="status"><span>5G</span><span>09:41</span></div><div class="screen-top"><span>A/B Testing</span><span>01</span></div><div class="panel" style="padding:8px;background:#121830"><div class="control" style="margin-bottom:7px">Version A — Static</div><div class="control highlight">Version B — Adaptive</div></div></div><div class="source-note">Version-selection screen — simplified reconstruction of Fig. 3-1.</div></div>
-        <div class="panel center stack"><div class="phone"><div class="status"><span>5G</span><span>09:41</span></div><div class="screen-top"><span>Static UI</span><span>00:40</span></div><div class="arena"><div class="player"></div><div class="target"></div></div><div class="controls-row"><div class="control">⚡<br/>Boost</div><div class="control">↑<br/>Jump</div></div></div><div class="source-note">Traditional version — simplified reconstruction of Fig. 3-2.</div></div>
-        <div class="panel center stack"><div class="phone"><div class="status"><span>5G</span><span>09:41</span></div><div class="screen-top"><span>Adaptive UI</span><span>00:50</span></div><div class="arena"><div class="player"></div><div class="target"></div></div><div class="tip">Target fits: hint</div><div class="controls-row"><div class="control">⚡<br/>Boost</div><div class="control highlight">↑<br/>Jump</div></div></div><div class="source-note">Adaptive version — simplified reconstruction of Fig. 3-3.</div></div>
-      </div>
-      <div class="slide-footer"><span>Visual source: thesis pp. 16–18</span><span class="section-number">10</span></div>
-    </div>`
+title:'النموذج الأولي', kicker:'لعبة ويب بواجهتين مختلفتين', notes:'تحدث عن الشاشات الرئيسة: البداية، اختيار نمط التجربة، اللعب، تقرير الأداء، ورسائل الإرشاد. الصور هنا تمثيل مبسط مستند إلى الأشكال المضمنة في البحث وليست إعادة تصدير حرفية لها.', html:'<div class="slide-card">\n<div class="section-head"><div><div class="eyebrow">09 • النموذج الأولي</div><h2>بيئة التجربة نفسها — وسلوك واجهة مختلف</h2></div><span class="pill">HTML • CSS • JavaScript</span></div>\n<div class="grid-3">\n<div class="panel center stack"><div class="phone"><div class="status"><span>5G</span><span>09:41</span></div><div class="screen-top"><span>اختبار A/B</span><span>01</span></div><div class="panel" style="padding:8px;background:#121830"><div class="control" style="margin-bottom:7px">النسخة A — ثابتة</div><div class="control highlight">النسخة B — تكيفية</div></div></div><div class="source-note">شاشة اختيار النسخة — إعادة بناء مبسطة للشكل (3-1).</div></div>\n<div class="panel center stack"><div class="phone"><div class="status"><span>5G</span><span>09:41</span></div><div class="screen-top"><span>واجهة ثابتة</span><span>00:40</span></div><div class="arena"><div class="player"></div><div class="target"></div></div><div class="controls-row"><div class="control">⚡<br/>تسريع</div><div class="control">↑<br/>قفز</div></div></div><div class="source-note">الواجهة التقليدية — إعادة بناء مبسطة للشكل (3-2).</div></div>\n<div class="panel center stack"><div class="phone"><div class="status"><span>5G</span><span>09:41</span></div><div class="screen-top"><span>واجهة تكيفية</span><span>00:50</span></div><div class="arena"><div class="player"></div><div class="target"></div></div><div class="tip">تلميح قصير عند الحاجة</div><div class="controls-row"><div class="control">⚡<br/>تسريع</div><div class="control highlight">↑<br/>قفز</div></div></div><div class="source-note">الواجهة التكيفية — إعادة بناء مبسطة للشكل (3-3).</div></div>\n</div>\n<div class="slide-footer"><span>المصدر البصري: ص 16–18</span><span class="section-number">10</span></div>\n</div>'
 },
 {
-  title:"Static vs Adaptive",
-  kicker:"The experimental contrast",
-  notes:`Make the fairness of the comparison explicit. The traditional interface keeps control size and position constant and provides no adaptive guidance. The adaptive interface monitors performance and changes selected UI elements. Gameplay goals and core game logic remain unchanged.`,
-  html:`
-    <div class="slide-card">
-      <div class="eyebrow">10 • Intervention</div>
-      <h2>Only the interface behavior changes</h2>
-      <table class="matrix">
-        <thead><tr><th>Dimension</th><th>Traditional UI</th><th>Adaptive UI</th></tr></thead>
-        <tbody>
-          <tr><td>Control size / position</td><td>Fixed</td><td>Can change according to rules</td></tr>
-          <tr><td>Guidance</td><td>No adaptive hints</td><td>Contextual short guidance</td></tr>
-          <tr><td>Visual density</td><td>Static</td><td>Can reduce unnecessary elements</td></tr>
-          <tr><td>Response to errors</td><td>None</td><td>Important controls can be emphasized</td></tr>
-          <tr><td>Core gameplay</td><td colspan="2"><strong>Kept stable across both versions</strong></td></tr>
-        </tbody>
-      </table>
-      <div class="callout"><p class="muted">This isolates the UI effect from differences in game content or core gameplay mechanics.</p></div>
-      <div class="slide-footer"><span>Source: pp. 17–18, 25–26</span><span class="section-number">11</span></div>
-    </div>`
+title:'المقارنة', kicker:'ثابتة مقابل تكيفية', notes:'أكّد على عدالة المقارنة: الواجهة التقليدية ثابتة، بينما التكيفية تراقب أداء اللاعب وتغيّر عناصر محددة عند تحقق الشروط. المحتوى الأساسي وآلية اللعب لا يتغيران.', html:'<div class="slide-card">\n<div class="eyebrow">10 • التدخل</div><h2>الاختلاف في الواجهة وليس في اللعبة</h2>\n<table class="matrix">\n<thead><tr><th>البعد</th><th>الواجهة التقليدية</th><th>الواجهة التكيفية</th></tr></thead>\n<tbody>\n<tr><td>الحجم / الموضع</td><td>ثابتان</td><td>يمكن تعديلهما وفق القواعد</td></tr>\n<tr><td>الإرشاد</td><td>لا توجد تلميحات تكيفية</td><td>تلميحات قصيرة وسياقية</td></tr>\n<tr><td>الكثافة البصرية</td><td>ثابتة</td><td>يمكن تقليل العناصر غير الضرورية</td></tr>\n<tr><td>الاستجابة للأخطاء</td><td>لا توجد استجابة تكيفية</td><td>إبراز عناصر مهمة عند الحاجة</td></tr>\n<tr><td>آلية اللعب الأساسية</td><td colspan="2"><strong>ثابتة في النسختين</strong></td></tr>\n</tbody></table>\n<div class="callout"><p class="muted">الهدف هو عزل أثر تصميم واجهة المستخدم وآلية استجابتها عن اختلاف محتوى اللعبة أو منطقها.</p></div>\n<div class="slide-footer"><span>المصدر: ص 17–18، 25–26</span><span class="section-number">11</span></div>\n</div>'
 },
 {
-  title:"Rule-Based Adaptive Engine",
-  kicker:"No AI / no machine learning",
-  notes:`This distinction is critical in the defense. The thesis explicitly says the engine does not use AI or machine learning. It uses predetermined if–then logical rules. Examples: enlarge a jump button after repeated errors; show short hints when performance declines; reduce unnecessary visual elements; gradually restore the normal interface when performance improves.`,
-  html:`
-    <div class="slide-card">
-      <div class="section-head"><div><div class="eyebrow">11 • Adaptive Mechanism</div><h2>Observable performance → explicit rules → UI response</h2></div><span class="pill">Rule-Based Adaptive Engine</span></div>
-      <div class="flow">
-        <div class="flow-box"><b>Observe</b><div class="muted">Errors • interaction time • incorrect clicks</div></div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-box"><b>Evaluate</b><div class="muted">Compare indicators with predefined conditions</div></div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-box"><b>Adapt</b><div class="muted">Change selected UI elements</div></div>
-      </div>
-      <div class="grid-4">
-        <div class="panel soft"><div class="label">Rule 01</div><h3>Repeated errors</h3><p class="muted">Enlarge an important control.</p></div>
-        <div class="panel"><div class="label">Rule 02</div><h3>Lower performance</h3><p class="muted">Show a brief contextual hint.</p></div>
-        <div class="panel"><div class="label">Rule 03</div><h3>Excess visual load</h3><p class="muted">Reduce unnecessary visual elements.</p></div>
-        <div class="panel good"><div class="label">Rule 04</div><h3>Improved performance</h3><p class="muted">Gradually return the interface toward normal.</p></div>
-      </div>
-      <div class="callout"><p class="quote">Important: the decision mechanism is explainable and repeatable because it is built from predefined if–then rules.</p></div>
-      <div class="slide-footer"><span>Source: p. 19</span><span class="section-number">12</span></div>
-    </div>`
+title:'محرك التكيف القائم على القواعد', kicker:'Rule-Based Adaptive Engine', notes:'هذه نقطة مهمة في المناقشة: الرسالة تنص على أن المحرك لا يستخدم الذكاء الاصطناعي أو التعلم الآلي، بل قواعد منطقية إذا–فإن محددة مسبقًا.', html:'<div class="slide-card">\n<div class="section-head"><div><div class="eyebrow">11 • آلية التكيف</div><h2>مؤشرات الأداء ← قواعد واضحة ← استجابة في الواجهة</h2></div><span class="pill">Rule-Based Adaptive Engine</span></div>\n<div class="flow">\n<div class="flow-box"><b>مراقبة</b><div class="muted">الأخطاء • زمن التفاعل • النقرات غير الصحيحة</div></div><div class="flow-arrow">←</div>\n<div class="flow-box"><b>تحليل</b><div class="muted">مقارنة المؤشرات مع شروط معرفة مسبقًا</div></div><div class="flow-arrow">←</div>\n<div class="flow-box"><b>تكيف</b><div class="muted">تعديل عناصر مختارة من الواجهة</div></div>\n</div>\n<div class="grid-4">\n<div class="panel soft"><div class="label">القاعدة 01</div><h3>تكرار الأخطاء</h3><p class="muted">تكبير عنصر تحكم مهم.</p></div>\n<div class="panel"><div class="label">القاعدة 02</div><h3>انخفاض الأداء</h3><p class="muted">إظهار تلميح مختصر.</p></div>\n<div class="panel"><div class="label">القاعدة 03</div><h3>زيادة الحمل البصري</h3><p class="muted">تقليل العناصر غير الضرورية.</p></div>\n<div class="panel good"><div class="label">القاعدة 04</div><h3>تحسن الأداء</h3><p class="muted">إعادة الواجهة تدريجيًا إلى حالتها الطبيعية.</p></div>\n</div>\n<div class="callout"><p class="quote">مهم: آلية اتخاذ القرار قابلة للتفسير وإعادة التنفيذ لأنها مبنية على قواعد إذا–فإن محددة.</p></div>\n<div class="slide-footer"><span>المصدر: ص 19</span><span class="section-number">12</span></div>\n</div>'
 },
 {
-  title:"Evaluation Metrics",
-  kicker:"What the prototype records during play",
-  notes:`Walk through the five indicators in the thesis: errors, misclicks, task completion time, number of adaptive-rule activations, and overall performance index shown in the final report. Also note the broader evaluation layer: heuristic evaluation and intention to continue.`,
-  html:`
-    <div class="slide-card">
-      <div class="eyebrow">12 • Evaluation</div>
-      <h2>Performance is recorded automatically</h2>
-      <div class="metric-grid">
-        <div class="metric"><strong>Errors</strong><span>How often the player commits an error during play.</span></div>
-        <div class="metric"><strong>Misclicks</strong><span>Incorrect clicks recorded by the prototype.</span></div>
-        <div class="metric"><strong>Task time</strong><span>Time required to complete the task.</span></div>
-        <div class="metric"><strong>Adaptations</strong><span>How many times adaptive rules are activated.</span></div>
-        <div class="metric"><strong>Overall performance</strong><span>Final performance indicator presented after the trial.</span></div>
-      </div>
-      <div class="grid-3">
-        <div class="panel"><div class="label">Usability</div><h3>Usability testing</h3><p class="muted">Performance-based interaction indicators.</p></div>
-        <div class="panel"><div class="label">Expert review</div><h3>Heuristic evaluation</h3><p class="muted">Specialist assessment of strengths and weaknesses.</p></div>
-        <div class="panel soft"><div class="label">Retention proxy</div><h3>Intention to continue</h3><p class="muted">Used as an indicator of retention in the single-session study.</p></div>
-      </div>
-      <div class="slide-footer"><span>Source: pp. 10, 20, 23, 26</span><span class="section-number">13</span></div>
-    </div>`
+title:'مؤشرات التقييم', kicker:'ماذا يسجل النموذج أثناء اللعب؟', notes:'استعرض المؤشرات الخمسة كما وردت: الأخطاء، النقرات غير الصحيحة، زمن إكمال المهمة، مرات تفعيل قواعد التكيف، ومؤشر الأداء العام. وأضف التقييم الإرشادي ونية الاستمرار كطبقات تقييم أخرى.', html:'<div class="slide-card">\n<div class="eyebrow">12 • التقييم</div><h2>تسجيل الأداء يتم تلقائيًا</h2>\n<div class="metric-grid">\n<div class="metric"><strong>الأخطاء</strong><span>عدد الأخطاء التي ارتكبها اللاعب أثناء اللعب.</span></div>\n<div class="metric"><strong>النقرات غير الصحيحة</strong><span>Misclicks المسجلة داخل النموذج.</span></div>\n<div class="metric"><strong>زمن المهمة</strong><span>الزمن المطلوب لإكمال المهمة.</span></div>\n<div class="metric"><strong>مرات التكيف</strong><span>عدد مرات تفعيل قواعد التكيف.</span></div>\n<div class="metric"><strong>الأداء العام</strong><span>مؤشر الأداء المعروض في التقرير النهائي.</span></div>\n</div>\n<div class="grid-3">\n<div class="panel"><div class="label">قابلية الاستخدام</div><h3>اختبارات الاستخدام</h3><p class="muted">مؤشرات أداء مرتبطة بالتفاعل مع النموذج.</p></div>\n<div class="panel"><div class="label">مراجعة الخبراء</div><h3>التقييم الإرشادي</h3><p class="muted">تحديد نقاط القوة والقصور في النموذج.</p></div>\n<div class="panel soft"><div class="label">الاحتفاظ</div><h3>نية الاستمرار</h3><p class="muted">مؤشر مستخدم للاحتفاظ في دراسة الجلسة الواحدة.</p></div>\n</div>\n<div class="slide-footer"><span>المصدر: ص 10، 20، 23، 26</span><span class="section-number">13</span></div>\n</div>'
 },
 {
-  title:"System Architecture",
-  kicker:"A closed adaptive loop",
-  notes:`Follow the flow from left to right: player interaction produces events; performance monitoring analyzes behavior; the rule engine checks predefined conditions; the adaptive UI manager applies the interface change. The loop continues throughout play.`,
-  html:`
-    <div class="slide-card">
-      <div class="section-head"><div><div class="eyebrow">13 • Architecture</div><h2>Adaptive UI is a continuous control loop</h2></div><span class="pill">System Architecture</span></div>
-      <div class="arch">
-        <div class="arch-col">
-          <div class="arch-box"><strong>Player interaction</strong><span class="muted">Game UI events</span></div>
-          <div class="connector">↓</div>
-          <div class="arch-box"><strong>Performance monitor</strong><span class="muted">Collect + analyze behavior</span></div>
-        </div>
-        <div class="arch-col">
-          <div class="arch-box soft"><strong>Rule Engine</strong><span class="muted">Compare indicators with predefined conditions</span></div>
-          <div class="connector">↓</div>
-          <div class="arch-box good"><strong>Adaptive UI Manager</strong><span class="muted">Apply approved interface changes</span></div>
-        </div>
-        <div class="arch-col">
-          <div class="arch-box"><strong>UI response</strong><span class="muted">Resize controls • hints • reduce visual elements</span></div>
-          <div class="connector">↺</div>
-          <div class="arch-box"><strong>Continue play</strong><span class="muted">Observe the next interaction state</span></div>
-        </div>
-      </div>
-      <div class="callout"><p class="muted">The engine modifies the interface independently of the core gameplay logic, allowing gameplay to remain stable while the UI responds.</p></div>
-      <div class="slide-footer"><span>Visual source: thesis p. 21 (Fig. 3-6)</span><span class="section-number">14</span></div>
-    </div>`
+title:'معمارية النظام', kicker:'دورة تكيف مستمرة', notes:'اتبع المسار: تفاعل اللاعب، ثم مراقبة الأداء، ثم محرك القواعد، ثم مدير الواجهة التكيفية، ثم تعديل الواجهة، ثم استمرار اللعب وعودة الدورة من جديد.', html:'<div class="slide-card">\n<div class="section-head"><div><div class="eyebrow">13 • المعمارية</div><h2>الواجهة التكيفية تعمل كحلقة استجابة مستمرة</h2></div><span class="pill">System Architecture</span></div>\n<div class="arch">\n<div class="arch-col"><div class="arch-box"><strong>تفاعل اللاعب</strong><span class="muted">أحداث واجهة اللعبة</span></div><div class="connector">↓</div><div class="arch-box"><strong>مراقبة الأداء</strong><span class="muted">جمع وتحليل السلوك</span></div></div>\n<div class="arch-col"><div class="arch-box soft"><strong>محرك القواعد</strong><span class="muted">مقارنة المؤشرات مع الشروط المعرفة مسبقًا</span></div><div class="connector">↓</div><div class="arch-box good"><strong>مدير الواجهة التكيفية</strong><span class="muted">تطبيق تعديلات الواجهة</span></div></div>\n<div class="arch-col"><div class="arch-box"><strong>استجابة الواجهة</strong><span class="muted">تكبير عناصر • تلميحات • تقليل عناصر</span></div><div class="connector">↺</div><div class="arch-box"><strong>استمرار اللعب</strong><span class="muted">مراقبة الحالة التالية</span></div></div>\n</div>\n<div class="callout"><p class="muted">التعديلات تقع في طبقة الواجهة، بينما يظل منطق اللعب الأساسي ثابتًا.</p></div>\n<div class="slide-footer"><span>المصدر البصري: ص 21، الشكل (3-6)</span><span class="section-number">14</span></div>\n</div>'
 },
 {
-  title:"Procedure",
-  kicker:"From literature review to analysis",
-  notes:`Summarize the eight implementation steps, then explain the experimental flow: standardized environment, version selection, task execution, automatic metric logging, adaptive rule execution, and final performance report.`,
-  html:`
-    <div class="slide-card">
-      <div class="eyebrow">14 • Procedure</div>
-      <h2>Implementation and experiment follow a repeatable sequence</h2>
-      <div class="timeline">
-        <div class="step"><b>01</b>Review literature</div>
-        <div class="step"><b>02</b>Build prototype</div>
-        <div class="step"><b>03</b>Create two versions</div>
-        <div class="step"><b>04</b>Define rules</div>
-        <div class="step"><b>05</b>Test functions</div>
-        <div class="step"><b>06</b>Run standardized trial</div>
-        <div class="step"><b>07</b>Record metrics</div>
-        <div class="step"><b>08</b>Compare + conclude</div>
-      </div>
-      <div class="grid-2">
-        <div class="panel"><div class="label">Experimental control</div><h3>Stable gameplay environment</h3><p class="muted">Participants used the same or comparable devices; tasks and core gameplay stayed constant.</p></div>
-        <div class="panel soft"><div class="label">Adaptive cycle</div><h3>Measure → rule → change → measure again</h3><p class="muted">In the adaptive version, the UI can change when predefined conditions are met.</p></div>
-      </div>
-      <div class="slide-footer"><span>Source: pp. 22–23</span><span class="section-number">15</span></div>
-    </div>`
+title:'إجراءات التنفيذ', kicker:'من مراجعة الأدبيات إلى تحليل النتائج', notes:'لخص الخطوات الثماني بسرعة، ثم ركّز على التجربة الموحدة: اختيار النسخة، تنفيذ المهمة، تسجيل المؤشرات، تطبيق التكيف عند تحقق الشروط، ثم إصدار التقرير النهائي.', html:'<div class="slide-card">\n<div class="eyebrow">14 • الإجراءات</div><h2>سلسلة تنفيذ قابلة للتكرار</h2>\n<div class="timeline">\n<div class="step"><b>01</b>مراجعة الأدبيات</div><div class="step"><b>02</b>بناء النموذج</div><div class="step"><b>03</b>تطوير النسختين</div><div class="step"><b>04</b>تصميم القواعد</div><div class="step"><b>05</b>اختبار الوظائف</div><div class="step"><b>06</b>تنفيذ التجربة</div><div class="step"><b>07</b>تسجيل المؤشرات</div><div class="step"><b>08</b>التحليل والاستنتاج</div>\n</div>\n<div class="grid-2">\n<div class="panel"><div class="label">ضبط التجربة</div><h3>بيئة لعب موحدة</h3><p class="muted">استخدام الجهاز نفسه أو أجهزة متقاربة، مع ثبات المهمة وعناصر اللعب الأساسية.</p></div>\n<div class="panel soft"><div class="label">الدورة التكيفية</div><h3>قياس ← قاعدة ← تغيير ← قياس</h3><p class="muted">في النسخة التكيفية تتغير الواجهة عند تحقق شروط محددة مسبقًا.</p></div>\n</div>\n<div class="slide-footer"><span>المصدر: ص 22–23</span><span class="section-number">15</span></div>\n</div>'
 },
 {
-  title:"Results",
-  kicker:"What the functional evaluation reported",
-  notes:`Be precise: the thesis reports successful operation of the prototype and better user-experience outcomes for the adaptive interface. It reports lower error rates and task-completion times in the abstract, but the body of the thesis does not provide numeric values. Do not invent percentages or bars.`,
-  html:`
-    <div class="slide-card">
-      <div class="section-head"><div><div class="eyebrow">15 • Results</div><h2>The adaptive version was reported as stronger on key usability signals</h2></div><span class="pill">No invented numbers</span></div>
-      <div class="result-lane">
-        <div class="result-card static">
-          <div class="result-head"><h3>Traditional static UI</h3><span class="status-badge bad">Reference condition</span></div>
-          <div class="result-point">Controls remain fixed throughout the trial.</div>
-          <div class="result-point">No adaptive hints or interface response to performance.</div>
-          <div class="result-point">Serves as the baseline for comparison.</div>
-        </div>
-        <div class="result-card adaptive">
-          <div class="result-head"><h3>Rule-based adaptive UI</h3><span class="status-badge good">Reported improvement</span></div>
-          <div class="result-point">Lower reported error rates.</div>
-          <div class="result-point">Lower reported task completion times.</div>
-          <div class="result-point">Dynamic changes supported a more flexible interaction experience.</div>
-        </div>
-      </div>
-      <div class="panel soft"><div class="label">Functional finding</div><h3>The prototype successfully executed the adaptive rules while preserving the core game mechanism.</h3><p class="muted" style="margin-top:7px">This matters because the UI can be evaluated as the primary changing factor.</p></div>
-      <div class="slide-footer"><span>Source: pp. 2, 25–27</span><span class="section-number">16</span></div>
-    </div>`
+title:'النتائج', kicker:'ماذا أظهر التقييم الوظيفي؟', notes:'كن دقيقًا: البحث يذكر تحسنًا واضحًا في الواجهة التكيفية وانخفاضًا في معدلات الأخطاء وزمن إكمال المهمة، لكنه لا يقدم في نص النتائج القيم الرقمية اللازمة لبناء نسب أو أعمدة رقمية. لذلك نعرض النتائج اتجاهيًا فقط.', html:'<div class="slide-card">\n<div class="section-head"><div><div class="eyebrow">15 • النتائج</div><h2>النسخة التكيفية أظهرت أداءً أفضل في المؤشرات الأساسية</h2></div><span class="pill">بدون أرقام مخترعة</span></div>\n<div class="result-lane">\n<div class="result-card static"><div class="result-head"><h3>الواجهة التقليدية</h3><span class="status-badge bad">حالة مرجعية</span></div>\n<div class="result-point">العناصر تبقى ثابتة طوال التجربة.</div><div class="result-point">لا توجد تلميحات أو استجابة تكيفية للأداء.</div><div class="result-point">تمثل خط الأساس للمقارنة.</div></div>\n<div class="result-card adaptive"><div class="result-head"><h3>الواجهة التكيفية</h3><span class="status-badge good">تحسن اتجاهي</span></div>\n<div class="result-point">انخفاض مُبلغ عنه في معدلات الأخطاء.</div><div class="result-point">انخفاض مُبلغ عنه في زمن إكمال المهمة.</div><div class="result-point">تجربة أكثر مرونة واستجابة لاحتياجات اللاعب.</div></div>\n</div>\n<div class="panel soft"><div class="label">النتيجة الوظيفية</div><h3>نجح النموذج في تنفيذ قواعد التكيف مع المحافظة على آلية اللعب الأساسية.</h3><p class="muted" style="margin-top:7px">وهذا دعم تقييم أثر الواجهة باعتبارها العامل المتغير الرئيس.</p></div>\n<div class="slide-footer"><span>المصدر: ص 2، 25–27</span><span class="section-number">16</span></div>\n</div>'
 },
 {
-  title:"Discussion",
-  kicker:"Why the result is theoretically coherent",
-  notes:`Connect the observed behavior to the framework. Adaptive controls becoming clearer and guidance appearing at the right time are consistent with reducing unnecessary cognitive effort. The discussion also aligns with prior literature on adapting experiences to user needs.`,
-  html:`
-    <div class="slide-card">
-      <div class="eyebrow">16 • Discussion</div>
-      <h2>The observed improvement follows the logic of the framework</h2>
-      <div class="grid-3">
-        <div class="panel soft"><div class="label">Cognitive Load</div><h3>Less unnecessary friction</h3><p class="muted">Simplified presentation and targeted guidance can reduce the effort required to navigate the interface.</p></div>
-        <div class="panel"><div class="label">Flow</div><h3>More responsive support</h3><p class="muted">The interface can support the player when performance falls, while reducing help as performance improves.</p></div>
-        <div class="panel good"><div class="label">Prior work</div><h3>Consistent direction</h3><p class="muted">The thesis reports that the findings are compatible with literature emphasizing personalization and behavior-responsive interaction.</p></div>
-      </div>
-      <div class="callout"><p class="quote">The contribution is not “AI adaptation.” It is a simple, explainable interface adaptation loop that can be implemented with explicit rules.</p></div>
-      <div class="slide-footer"><span>Source: pp. 26–27</span><span class="section-number">17</span></div>
-    </div>`
+title:'المناقشة', kicker:'لماذا تتسق النتيجة مع الإطار النظري؟', notes:'اربط ما حدث بالفعل بالأساس النظري: تبسيط العرض والتوجيه المناسب عند الحاجة يتسقان مع تقليل العبء المعرفي، والاستجابة للأداء تتسق مع دعم التدفق. كما يذكر البحث توافق النتيجة مع اتجاهات الدراسات السابقة.', html:'<div class="slide-card">\n<div class="eyebrow">16 • المناقشة</div><h2>النتيجة تتسق مع منطق الإطار النظري</h2>\n<div class="grid-3">\n<div class="panel soft"><div class="label">العبء المعرفي</div><h3>تقليل الاحتكاك غير الضروري</h3><p class="muted">تبسيط العرض وإظهار المساعدة المناسبة يمكن أن يقلل الجهد المطلوب من اللاعب للتعامل مع الواجهة.</p></div>\n<div class="panel"><div class="label">التدفق</div><h3>دعم أكثر استجابة</h3><p class="muted">يمكن للواجهة دعم اللاعب عند انخفاض الأداء وتقليل المساعدة عند تحسنه.</p></div>\n<div class="panel good"><div class="label">الدراسات السابقة</div><h3>اتجاه متسق</h3><p class="muted">الرسالة تشير إلى توافق النتيجة مع الأدبيات التي تؤكد التخصيص والاستجابة لسلوك المستخدم.</p></div>\n</div>\n<div class="callout"><p class="quote">الإضافة ليست «تكيفًا بالذكاء الاصطناعي»، بل حلقة تكيف واضحة وقابلة للتفسير مبنية على قواعد صريحة.</p></div>\n<div class="slide-footer"><span>المصدر: ص 26–27</span><span class="section-number">17</span></div>\n</div>'
 },
 {
-  title:"Contribution",
-  kicker:"What the study actually demonstrates",
-  notes:`Separate the demonstrated contribution from future possibilities. Demonstrated: a working rule-based adaptive interface, stable gameplay, and a comparison showing stronger usability-related outcomes in the adaptive version. The thesis also presents practical guidance for developers.`,
-  html:`
-    <div class="slide-card">
-      <div class="section-head"><div><div class="eyebrow">17 • Contribution</div><h2>From research question to practical design pattern</h2></div><span class="pill">What was achieved</span></div>
-      <div class="grid-3">
-        <div class="panel"><div class="big-num">01</div><div class="label" style="margin-top:8px">Prototype</div><p class="muted">A browser-based mobile-game prototype with two interface conditions.</p></div>
-        <div class="panel soft"><div class="big-num">02</div><div class="label" style="margin-top:8px">Adaptive engine</div><p class="muted">Explicit if–then rules that translate player performance into UI changes.</p></div>
-        <div class="panel good"><div class="big-num">03</div><div class="label" style="margin-top:8px">Evidence</div><p class="muted">Functional operation plus stronger reported usability-related outcomes for the adaptive version.</p></div>
-      </div>
-      <div class="panel"><div class="label">Design takeaway</div><h3>Adapt the interface before changing the game.</h3><p class="muted">The thesis positions behavior-responsive UI as a practical direction for improving usability and sustaining player engagement.</p></div>
-      <div class="slide-footer"><span>Source: pp. 28, 30–31</span><span class="section-number">18</span></div>
-    </div>`
+title:'مساهمة الدراسة', kicker:'ماذا أنجز البحث فعليًا؟', notes:'افصل ما ثبت في الدراسة عن الأفكار المستقبلية. المساهمة المثبتة: نموذج أولي عامل، محرك تكيف قائم على القواعد، ثبات آلية اللعب، وتحسن اتجاهي في النتائج المرتبطة بقابلية الاستخدام.', html:'<div class="slide-card">\n<div class="section-head"><div><div class="eyebrow">17 • المساهمة</div><h2>من سؤال بحث إلى نمط تصميم عملي</h2></div><span class="pill">الإنجاز الفعلي</span></div>\n<div class="grid-3">\n<div class="panel"><div class="big-num">01</div><div class="label" style="margin-top:8px">النموذج</div><p class="muted">نموذج أولي للعبة هاتف محمول عبر المتصفح بنسختين للواجهة.</p></div>\n<div class="panel soft"><div class="big-num">02</div><div class="label" style="margin-top:8px">المحرك</div><p class="muted">قواعد إذا–فإن تحول أداء اللاعب إلى تعديلات على الواجهة.</p></div>\n<div class="panel good"><div class="big-num">03</div><div class="label" style="margin-top:8px">الدليل</div><p class="muted">تشغيل وظيفي ونتائج اتجاهية أفضل للواجهة التكيفية في مؤشرات تجربة الاستخدام.</p></div>\n</div>\n<div class="panel"><div class="label">الخلاصة التصميمية</div><h3>كيّف الواجهة قبل أن تغيّر اللعبة.</h3><p class="muted">البحث يقدّم الواجهة المستجيبة للسلوك كاتجاه عملي لتحسين قابلية الاستخدام واستمرارية التفاعل.</p></div>\n<div class="slide-footer"><span>المصدر: ص 28، 30–31</span><span class="section-number">18</span></div>\n</div>'
 },
 {
-  title:"Limitations",
-  kicker:"What the thesis does not claim",
-  notes:`Keep this slide disciplined. The study uses a purposive sample of eight experts, a single-session experimental setup, and a web-based prototype in a Saudi local context. Retention is represented through intention to continue rather than long-term behavioral retention. Do not imply population-level generalization.`,
-  html:`
-    <div class="slide-card">
-      <div class="eyebrow">18 • Limits</div>
-      <h2>The strongest claims are bounded by the design</h2>
-      <div class="grid-2">
-        <div class="stack">
-          <div class="panel warn"><div class="label">Sample</div><h3>Small, purposive expert group</h3><p class="muted">Eight specialists were selected for relevant expertise; this is not a broad player sample.</p></div>
-          <div class="panel"><div class="label">Session design</div><h3>Single experimental session</h3><p class="muted">Retention is assessed through intention to continue rather than long-term observed retention behavior.</p></div>
-        </div>
-        <div class="stack">
-          <div class="panel"><div class="label">Context</div><h3>Web-based prototype + local field setting</h3><p class="muted">Evaluation was conducted in a Saudi technical environment with participants associated with Tuwaiq Academy.</p></div>
-          <div class="panel soft"><div class="label">Interpretation</div><h3>Promising practical evidence, not universal proof</h3><p class="muted">The findings support the viability of rule-based adaptive UI in this study context; broader effects require further study.</p></div>
-        </div>
-      </div>
-      <div class="slide-footer"><span>Source: pp. 10, 15, 23, 31</span><span class="section-number">19</span></div>
-    </div>`
+title:'حدود الدراسة', kicker:'ما الذي لا تدّعيه الدراسة؟', notes:'وضح حدود التعميم: عينة قصدية صغيرة من ثمانية خبراء، جلسة تجريبية واحدة، نموذج أولي يعمل عبر الويب، وسياق ميداني محلي. الاحتفاظ قيس من خلال نية الاستمرار لا من خلال سلوك طويل الأمد.', html:'<div class="slide-card">\n<div class="eyebrow">18 • الحدود</div><h2>قوة الاستنتاج مرتبطة بحدود التصميم</h2>\n<div class="grid-2">\n<div class="stack">\n<div class="panel warn"><div class="label">العينة</div><h3>صغيرة وقصدية</h3><p class="muted">ثمانية مختصين؛ وليست عينة واسعة من اللاعبين.</p></div>\n<div class="panel"><div class="label">التجربة</div><h3>جلسة واحدة</h3><p class="muted">الاحتفاظ مُمثل بنية الاستمرار بدل قياس احتفاظ سلوكي طويل الأمد.</p></div>\n</div>\n<div class="stack">\n<div class="panel"><div class="label">السياق</div><h3>نموذج ويب وبيئة محلية</h3><p class="muted">التطبيق الميداني تم في سياق تقني داخل المملكة العربية السعودية مع مشاركين مرتبطين بأكاديمية طويق.</p></div>\n<div class="panel soft"><div class="label">التفسير</div><h3>دليل واعد وليس إثباتًا عامًا</h3><p class="muted">النتائج تدعم جدوى التكيف القائم على القواعد في سياق الدراسة، بينما يحتاج التعميم إلى أبحاث إضافية.</p></div>\n</div>\n</div>\n<div class="slide-footer"><span>المصدر: ص 10، 15، 23، 31</span><span class="section-number">19</span></div>\n</div>'
 },
 {
-  title:"Conclusion",
-  kicker:"The thesis answer in one view",
-  notes:`Close the research argument: the prototype demonstrates that a rule-based adaptive interface can respond to performance while preserving gameplay, and the reported evaluation indicates improved usability-related outcomes versus the static version. Frame this as evidence for a promising direction.`,
-  html:`
-    <div class="slide-card">
-      <div class="eyebrow">19 • Conclusion</div>
-      <h2>Adaptive UI can turn a static interface into a responsive layer</h2>
-      <div class="grid-2">
-        <div class="panel soft"><div class="label">Answer</div><p class="quote">The study found that a rule-based adaptive interface provides a more flexible, responsive user experience than a static interface inside the prototype environment.</p></div>
-        <div class="stack">
-          <div class="panel"><strong>Mechanism</strong><p class="muted">Monitor performance → apply predefined rules → adapt selected interface elements.</p></div>
-          <div class="panel"><strong>Outcome</strong><p class="muted">The thesis reports lower error rates and task times, alongside stronger retention intentions in the adaptive condition.</p></div>
-          <div class="panel good"><strong>Direction</strong><p class="muted">Behavior-responsive UI is presented as a promising strategy for mobile games.</p></div>
-        </div>
-      </div>
-      <div class="slide-footer"><span>Source: pp. 2, 28, 30–31</span><span class="section-number">20</span></div>
-    </div>`
+title:'الخاتمة', kicker:'الإجابة في صورة واحدة', notes:'اختم بالرسالة الأساسية: الواجهة التكيفية القائمة على القواعد استطاعت الاستجابة لأداء اللاعب مع الحفاظ على آلية اللعب، والبحث يذكر تحسنًا في مؤشرات تجربة الاستخدام مقارنة بالواجهة الثابتة.', html:'<div class="slide-card">\n<div class="eyebrow">19 • الخاتمة</div><h2>الواجهة التكيفية تحوّل الواجهة الثابتة إلى طبقة مستجيبة</h2>\n<div class="grid-2">\n<div class="panel soft"><div class="label">إجابة السؤال</div><p class="quote">داخل بيئة النموذج الأولي، وفّرت الواجهة التكيفية القائمة على القواعد تجربة أكثر مرونة واستجابة من الواجهة التقليدية.</p></div>\n<div class="stack">\n<div class="panel"><strong>الآلية</strong><p class="muted">مراقبة الأداء → تطبيق القواعد → تعديل عناصر الواجهة.</p></div>\n<div class="panel"><strong>النتيجة</strong><p class="muted">البحث يذكر انخفاض الأخطاء وزمن المهمة وارتفاع نية الاستمرار في الحالة التكيفية.</p></div>\n<div class="panel good"><strong>الاتجاه</strong><p class="muted">الاستجابة لسلوك اللاعب تمثل اتجاهًا واعدًا في تطوير ألعاب الهاتف المحمول.</p></div>\n</div>\n</div>\n<div class="slide-footer"><span>المصدر: ص 2، 28، 30–31</span><span class="section-number">20</span></div>\n</div>'
 },
 {
-  title:"Recommendations",
-  kicker:"What follows from the findings",
-  notes:`Present recommendations separately from future technical research. The thesis recommends wider use of adaptive concepts, more adaptive elements, use of interaction data to improve rules, measurement of other indicators such as satisfaction and engagement, and stronger collaboration between researchers and developers.`,
-  html:`
-    <div class="slide-card">
-      <div class="eyebrow">20 • Recommendations</div>
-      <h2>Move from a single prototype to a broader design practice</h2>
-      <div class="grid-3">
-        <div class="panel"><div class="label">For developers</div><h3>Adopt adaptive UI concepts</h3><p class="muted">Use behavior-responsive interfaces as part of mobile-game design.</p></div>
-        <div class="panel soft"><div class="label">For systems</div><h3>Expand the adaptive surface</h3><p class="muted">Apply adaptation to additional in-game elements where appropriate.</p></div>
-        <div class="panel"><div class="label">For evaluation</div><h3>Measure more than speed and errors</h3><p class="muted">Include satisfaction, interaction, and continued-use indicators.</p></div>
-      </div>
-      <div class="grid-2">
-        <div class="panel"><div class="label">Data</div><h3>Use interaction evidence to refine rules</h3><p class="muted">The thesis recommends leveraging player interaction data to create more precise and effective adaptation mechanisms.</p></div>
-        <div class="panel good"><div class="label">Collaboration</div><h3>Connect researchers and game developers</h3><p class="muted">Translate research findings into practical interface solutions.</p></div>
-      </div>
-      <div class="slide-footer"><span>Source: p. 31</span><span class="section-number">21</span></div>
-    </div>`
+title:'التوصيات', kicker:'من نموذج أولي إلى ممارسة تصميمية أوسع', notes:'قدّم التوصيات كما وردت: تبني الواجهات التكيفية، توسيع عناصر التكيف، الاستفادة من بيانات التفاعل، قياس مؤشرات أخرى، وتعزيز التعاون بين الباحثين والمطورين.', html:'<div class="slide-card">\n<div class="eyebrow">20 • التوصيات</div><h2>توسيع الفكرة من نموذج أولي إلى ممارسة</h2>\n<div class="grid-3">\n<div class="panel"><div class="label">للمطورين</div><h3>تبني مفاهيم الواجهات التكيفية</h3><p class="muted">إدماج الاستجابة لسلوك اللاعب ضمن تصميم ألعاب الهاتف المحمول.</p></div>\n<div class="panel soft"><div class="label">للأنظمة</div><h3>توسيع نطاق التكيف</h3><p class="muted">تطبيق التكيف على عناصر إضافية داخل اللعبة عند الحاجة.</p></div>\n<div class="panel"><div class="label">للتقييم</div><h3>قياس أكثر من السرعة والأخطاء</h3><p class="muted">تشمل القياسات رضا المستخدم والتفاعل والاستمرار.</p></div>\n</div>\n<div class="grid-2">\n<div class="panel"><div class="label">البيانات</div><h3>استخدام بيانات التفاعل لتحسين القواعد</h3><p class="muted">الاستفادة من البيانات الناتجة عن تفاعل اللاعبين لبناء آليات تكيف أكثر دقة.</p></div>\n<div class="panel good"><div class="label">التعاون</div><h3>ربط البحث بالتطوير</h3><p class="muted">تعزيز التعاون بين الباحثين ومطوري الألعاب لتطوير حلول عملية.</p></div>\n</div>\n<div class="slide-footer"><span>المصدر: ص 31</span><span class="section-number">21</span></div>\n</div>'
 },
 {
-  title:"Future Work & References",
-  kicker:"Where the research can go next",
-  notes:`End with the thesis's own future directions: larger player samples, AI/ML-based adaptation in future studies, different mobile-game genres, and comparison of adaptive strategies. Then briefly show the eight references listed in the thesis.`,
-  html:`
-    <div class="slide-card">
-      <div class="grid-2">
-        <div>
-          <div class="eyebrow">21 • Future Work</div>
-          <h2>From explicit rules to broader adaptive research</h2>
-          <div class="bullet-list" style="margin-top:18px">
-            <div class="bullet">Test larger samples of players in different usage environments.</div>
-            <div class="bullet">Explore AI and machine-learning adaptation in future work.</div>
-            <div class="bullet">Study different game types, including educational, strategy, and multiplayer games.</div>
-            <div class="bullet">Compare adaptation methods by usability, satisfaction, and retention indicators.</div>
-          </div>
-        </div>
-        <div>
-          <div class="eyebrow">References</div>
-          <div class="refs">
-            <div><b>Chen, Y., Li, X., & Wang, H. (2021).</b> Predicting Player Churn and Customizing Game Experiences Using Performance Data.</div>
-            <div><b>Csikszentmihalyi, M. (1990).</b> Flow: The Psychology of Optimal Experience.</div>
-            <div><b>Makris, D. (2016).</b> Technical Challenges in Implementing Adaptive User Interfaces at Runtime.</div>
-            <div><b>Nielsen, J. (1994).</b> Enhancing the explanatory power of usability heuristics.</div>
-            <div><b>Padte, R. (2019).</b> The Effect of Adaptive Textual Feedback on Player Engagement in Endless Runner Games.</div>
-            <div><b>Putkonen, A. (2022).</b> Early Player Behavior as a Predictor of Retention in Free-to-Play Mobile Games.</div>
-            <div><b>Sweller, J. (1988).</b> Cognitive load during problem solving: Effects on learning.</div>
-            <div><b>Tondello, G. F. (2019).</b> Dynamic Personalization of Interactive Systems.</div>
-          </div>
-        </div>
-      </div>
-      <div class="callout"><p class="quote">Thank you — discussion.</p></div>
-      <div class="slide-footer"><span>Source: pp. 31–32</span><span class="section-number">22</span></div>
-    </div>`
+title:'الدراسات المستقبلية والمراجع', kicker:'أين يمكن أن يذهب البحث بعد ذلك؟', notes:'اختم بمسارات البحث المستقبلية المذكورة في الرسالة: عينات أكبر، استخدام AI/ML في دراسات لاحقة، أنواع ألعاب مختلفة، ومقارنة أساليب التكيف. ثم اعرض المراجع الثمانية الأساسية.', html:'<div class="slide-card">\n<div class="grid-2">\n<div>\n<div class="eyebrow">21 • الدراسات المستقبلية</div>\n<h2>من القواعد الصريحة إلى بحث تكيفي أوسع</h2>\n<div class="bullet-list" style="margin-top:18px">\n<div class="bullet">إجراء تجارب على عينات أكبر من اللاعبين وفي بيئات استخدام مختلفة.</div>\n<div class="bullet">تطوير نماذج تكيف تستخدم الذكاء الاصطناعي والتعلم الآلي في الدراسات المستقبلية.</div>\n<div class="bullet">دراسة ألعاب تعليمية واستراتيجية ومتعددة اللاعبين.</div>\n<div class="bullet">مقارنة أساليب التكيف حسب سهولة الاستخدام والرضا والاحتفاظ.</div>\n</div>\n</div>\n<div>\n<div class="eyebrow">المراجع</div>\n<div class="refs">\n<div><b>Chen, Y., Li, X., & Wang, H. (2021).</b> Predicting Player Churn and Customizing Game Experiences Using Performance Data.</div>\n<div><b>Csikszentmihalyi, M. (1990).</b> Flow: The Psychology of Optimal Experience.</div>\n<div><b>Makris, D. (2016).</b> Technical Challenges in Implementing Adaptive User Interfaces at Runtime.</div>\n<div><b>Nielsen, J. (1994).</b> Enhancing the explanatory power of usability heuristics.</div>\n<div><b>Padte, R. (2019).</b> The Effect of Adaptive Textual Feedback on Player Engagement in Endless Runner Games.</div>\n<div><b>Putkonen, A. (2022).</b> Early Player Behavior as a Predictor of Retention in Free-to-Play Mobile Games.</div>\n<div><b>Sweller, J. (1988).</b> Cognitive load during problem solving: Effects on learning.</div>\n<div><b>Tondello, G. F. (2019).</b> Dynamic Personalization of Interactive Systems.</div>\n</div>\n</div>\n</div>\n<div class="callout"><p class="quote">شكرًا لكم — النقاش.</p></div>\n<div class="slide-footer"><span>المصدر: ص 31–32</span><span class="section-number">22</span></div>\n</div>'
 }
 ];
 
@@ -526,95 +85,58 @@ slides.forEach((slide, i) => {
   const el = document.createElement("section");
   el.className = `slide ${i === 0 ? "active" : ""}`;
   el.setAttribute("role", "group");
-  el.setAttribute("aria-roledescription", "slide");
-  el.setAttribute("aria-label", `${i + 1} of ${slides.length}: ${slide.title}`);
+  el.setAttribute("aria-roledescription", "شريحة");
+  el.setAttribute("aria-label", `الشريحة ${i + 1} من ${slides.length}: ${slide.title}`);
   el.innerHTML = slide.html;
   stage.appendChild(el);
 });
-
 const slideEls = [...document.querySelectorAll(".slide")];
 
 function updateNotes() {
   const s = slides[index];
+  const next = index < slides.length - 1 ? `انتقل إلى «${slides[index + 1].title}» بربط النقطة الحالية بالسؤال التالي في منطق الدراسة.` : "اختم المناقشة وافتح باب الأسئلة.";
   notesBody.innerHTML = `
-    <div class="note-block">
-      <div class="note-label">What to say</div>
-      <div>${escapeHtml(s.notes).replace(/\n/g,"<br>")}</div>
-    </div>
-    <div class="note-block">
-      <div class="note-label">Transition</div>
-      <div>${escapeHtml(index < slides.length - 1 ? `Transition to “${slides[index + 1].title}” by following the next question in the research logic.` : "Close the defense and invite discussion.")}</div>
-    </div>`;
+    <div class="note-block"><div class="note-label">ماذا أقول؟</div><div>${escapeHtml(s.notes).replace(/\n/g,"<br>")}</div></div>
+    <div class="note-block"><div class="note-label">الانتقال</div><div>${escapeHtml(next)}</div></div>`;
 }
-
-function escapeHtml(s){
-  return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
-}
-
+function escapeHtml(s){ return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c])); }
 function render() {
-  slideEls.forEach((el, i) => {
-    el.classList.toggle("active", i === index);
-    el.setAttribute("aria-hidden", i === index ? "false" : "true");
-  });
-  const n = index + 1;
-  counter.textContent = `${String(n).padStart(2,"0")} / ${String(slides.length).padStart(2,"0")}`;
-  slideTitle.textContent = slides[index].title;
-  progressBar.style.width = `${(n / slides.length) * 100}%`;
-  prevBtn.disabled = index === 0;
-  nextBtn.disabled = index === slides.length - 1;
+  slideEls.forEach((el,i)=>{ el.classList.toggle("active",i===index); el.setAttribute("aria-hidden",i===index?"false":"true"); });
+  const n=index+1;
+  counter.textContent=`${String(n).padStart(2,"0")} / ${String(slides.length).padStart(2,"0")}`;
+  slideTitle.textContent=slides[index].title;
+  progressBar.style.width=`${(n/slides.length)*100}%`;
+  prevBtn.disabled=index===0; nextBtn.disabled=index===slides.length-1;
   updateNotes();
 }
-
-function go(delta){
-  index = Math.max(0, Math.min(slides.length - 1, index + delta));
-  render();
-}
-
-function goTo(target){
-  index = Math.max(0, Math.min(slides.length - 1, target));
-  render();
-}
-
+function go(delta){ index=Math.max(0,Math.min(slides.length-1,index+delta)); render(); }
+function goTo(target){ index=Math.max(0,Math.min(slides.length-1,target)); render(); }
 function toggleNotes(force){
-  const shouldOpen = typeof force === "boolean" ? force : !notesPanel.classList.contains("open");
-  notesPanel.classList.toggle("open", shouldOpen);
-  notesPanel.setAttribute("aria-hidden", String(!shouldOpen));
+  const open=typeof force==="boolean"?force:!notesPanel.classList.contains("open");
+  notesPanel.classList.toggle("open",open); notesPanel.setAttribute("aria-hidden",String(!open));
 }
-
 async function toggleFullscreen(){
   try{
-    if(!document.fullscreenElement){
-      await document.documentElement.requestFullscreen();
-    }else{
-      await document.exitFullscreen();
-    }
+    if(!document.fullscreenElement) await document.documentElement.requestFullscreen();
+    else await document.exitFullscreen();
   }catch(e){}
 }
-
-prevBtn.addEventListener("click", () => go(-1));
-nextBtn.addEventListener("click", () => go(1));
-notesToggle.addEventListener("click", () => toggleNotes());
-notesClose.addEventListener("click", () => toggleNotes(false));
-fullscreenBtn.addEventListener("click", toggleFullscreen);
-
-document.addEventListener("keydown", e => {
-  const key = e.key;
-  if(["ArrowRight","ArrowDown"," ","PageDown"].includes(key)){ e.preventDefault(); go(1); }
-  if(["ArrowLeft","ArrowUp","PageUp"].includes(key)){ e.preventDefault(); go(-1); }
-  if(key === "Home"){ e.preventDefault(); goTo(0); }
-  if(key === "End"){ e.preventDefault(); goTo(slides.length - 1); }
-  if(key.toLowerCase() === "f"){ e.preventDefault(); toggleFullscreen(); }
-  if(key.toLowerCase() === "n"){ e.preventDefault(); toggleNotes(); }
-  if(key === "Escape" && notesPanel.classList.contains("open")) toggleNotes(false);
+prevBtn.addEventListener("click",()=>go(-1));
+nextBtn.addEventListener("click",()=>go(1));
+notesToggle.addEventListener("click",()=>toggleNotes());
+notesClose.addEventListener("click",()=>toggleNotes(false));
+fullscreenBtn.addEventListener("click",toggleFullscreen);
+document.addEventListener("keydown",e=>{
+  const k=e.key;
+  if(["ArrowRight","ArrowDown"," ","PageDown"].includes(k)){e.preventDefault();go(1);}
+  if(["ArrowLeft","ArrowUp","PageUp"].includes(k)){e.preventDefault();go(-1);}
+  if(k==="Home"){e.preventDefault();goTo(0);}
+  if(k==="End"){e.preventDefault();goTo(slides.length-1);}
+  if(k.toLowerCase()==="f"){e.preventDefault();toggleFullscreen();}
+  if(k.toLowerCase()==="n"){e.preventDefault();toggleNotes();}
+  if(k==="Escape"&&notesPanel.classList.contains("open")) toggleNotes(false);
 });
-
-let touchX = null;
-stage.addEventListener("touchstart", e => { touchX = e.changedTouches[0].clientX; }, {passive:true});
-stage.addEventListener("touchend", e => {
-  if(touchX === null) return;
-  const dx = e.changedTouches[0].clientX - touchX;
-  if(Math.abs(dx) > 48) go(dx < 0 ? 1 : -1);
-  touchX = null;
-});
-
+let touchX=null;
+stage.addEventListener("touchstart",e=>{touchX=e.changedTouches[0].clientX;},{passive:true});
+stage.addEventListener("touchend",e=>{if(touchX===null)return;const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>48)go(dx<0?1:-1);touchX=null;});
 render();
