@@ -1,42 +1,120 @@
-const slides=[
-{title:'الغلاف', kicker:'مناقشة بحث الماجستير', notes:`ابدأ بتعريف عنوان البحث ثم أوضح أن التجربة تقارن بين واجهتين داخل البيئة نفسها. نقطة الدفاع الأساسية: ما تغيّر هو الواجهة واستجابتها للأداء، وليس منطق اللعب.`, html:'<div class="card"><div class="title-grid">\n<div><div class="kicker">مناقشة بحث الماجستير · EMIX · يوليو 2026</div><div class="hero-line"></div>\n<h1>أثر واجهات المستخدم التكيفية على معدل احتفاظ اللاعبين في ألعاب الهاتف المحمول</h1>\n<p class="lead">دراسة شبه تجريبية تقارن واجهة تقليدية ثابتة بواجهة مستخدم تكيفية تعتمد على قواعد منطقية داخل نموذج أولي للعبة هاتف محمول يعمل عبر المتصفح.</p>\n<div class="meta-grid"><div class="meta-box"><b>الباحث</b>Mohammed Ali ALOUFI</div><div class="meta-box"><b>المشرف</b>Mr. Mohammed Al-Nazli</div><div class="meta-box"><b>البرنامج</b>ماجستير تنفيذي في تصميم واجهة وتجربة المستخدم وتقنيات الألعاب (EMIX)</div><div class="meta-box"><b>الجهة</b>أكاديمية أنس للفنون</div></div></div>\n<div class="panel soft center"><div><div class="label">الفكرة المركزية</div><div class="big">AUI</div><p class="muted">واجهة تستجيب لأداء اللاعب بدل أن تقدم تجربة ثابتة للجميع.</p><div class="tags"><span class="tag">UI/UX</span><span class="tag">Mobile Games</span><span class="tag">Rule-Based</span></div></div></div></div>\n<div class="footer-note"><span class="source">المصدر: صفحة العنوان والملخص</span><span>01</span></div></div>'},{title:'المشكلة', kicker:'لماذا تبدأ المشكلة من الواجهة؟', notes:`اربط المشكلة مباشرة بالواقع التصميمي: نفس العناصر ونفس المساحة ونفس طريقة التوجيه لا تناسب بالضرورة جميع اللاعبين. ثم انتقل إلى لماذا هذا مهم.`, html:'<div class="card"><div><div class="kicker">01 · المشكلة</div><h2>واجهة ثابتة واحدة للاعبين غير متطابقين</h2></div>\n<div class="grid2"><div class="panel warm"><div class="label">اللاعب المبتدئ</div><h3>قد يواجه عبئًا معرفيًا أعلى</h3><p class="muted">صعوبة فهم عناصر الواجهة وآليات اللعب قد تزيد الجهد المعرفي والأخطاء والإحباط، خصوصًا في المراحل الأولى.</p></div>\n<div class="panel"><div class="label">اللاعب ذو الخبرة</div><h3>قد لا يجد الواجهة مرنة بما يكفي</h3><p class="muted">التصميم الثابت لا يراعي اختلاف الخبرة ومستوى المهارة وسرعة التعلم وأنماط التفاعل.</p></div></div>\n<div class="callout"><p class="quote">مشكلة البحث: دراسة أثر استخدام واجهات المستخدم التكيفية في الحد من التسرب المبكر وتحسين معدل احتفاظ اللاعبين.</p></div>\n<div class="footer-note"><span class="source">المصدر: ص 2–3</span><span>02</span></div></div>'},{title:'لماذا تهم؟', kicker:'التسرب المبكر ليس مشكلة تجربة فقط', notes:`أعط هذه الشريحة سياقًا سريعًا فقط. لا تدخل في تفاصيل النظريات بعد؛ الهدف هو تبرير المشكلة.`, html:'<div class="card"><div><div class="kicker">02 · الدافع</div><h2>الاحتفاظ أصبح مرتبطًا بجودة التجربة</h2></div>\n<div class="grid3"><div class="panel"><div class="label">سياق السوق</div><h3>منافسة متزايدة</h3><p class="muted">نجاح ألعاب الهاتف المحمول لا يرتبط بجذب لاعبين جدد فقط، بل باستمرار تفاعلهم.</p></div>\n<div class="panel"><div class="label">تجربة المستخدم</div><h3>وضوح + سهولة استخدام</h3><p class="muted">واجهة واضحة ومنظمة تدعم التعلم وتقلل الأخطاء، بينما الواجهة المعقدة قد تربك اللاعب.</p></div>\n<div class="panel soft"><div class="label">اتجاه الدراسة</div><h3>Adaptive UI</h3><p class="muted">تعديل عناصر الواجهة وفق خصائص المستخدم وسلوكه ومستوى أدائه.</p></div></div>\n<div class="callout"><p class="quote">الفكرة: بدل إجبار اللاعب على التكيف مع واجهة ثابتة، تسمح الواجهة بالتكيف مع اللاعب.</p></div>\n<div class="footer-note"><span class="source">المصدر: ص 2، 8–10</span><span>03</span></div></div>'},{title:'سؤال البحث', kicker:'السؤال الذي يحرك التجربة', notes:`اقرأ السؤال كما هو تقريبًا، ثم استخدمه كبوصلة لباقي العرض. كل جزء لاحق يجب أن يجيب عن جزء من هذا السؤال.`, html:'<div class="card"><div><div class="kicker">03 · السؤال</div><h2>سؤال واحد، لكن بإجابة تتطلب نظامًا قابلًا للمقارنة</h2></div>\n<div class="callout"><p class="quote">«ما أثر استخدام واجهات المستخدم التكيفية (AUIs) على معدل احتفاظ اللاعبين في ألعاب الهاتف المحمول؟»</p></div>\n<div class="grid3"><div class="panel"><div class="label">العامل الذي يتغير</div><h3>نوع الواجهة</h3><p class="muted">تقليدية ثابتة / تكيفية قائمة على القواعد.</p></div><div class="panel"><div class="label">ما يراقبه النموذج</div><h3>أداء اللاعب</h3><p class="muted">الأخطاء، النقرات غير الصحيحة، الزمن، وتفعيل قواعد التكيف.</p></div><div class="panel good"><div class="label">ما يرتبط بالاحتفاظ</div><h3>نية الاستمرار</h3><p class="muted">مؤشر أولي في دراسة تعتمد على جلسة تجريبية واحدة.</p></div></div>\n<div class="footer-note"><span class="source">المصدر: ص 3–4، 10، 14–15</span><span>04</span></div></div>'},{title:'الأهداف', kicker:'ماذا أرادت الدراسة أن تحقق؟', notes:`لا تقرأ الأهداف كقائمة طويلة؛ اختصرها إلى: فهم، تشخيص، بناء، تقييم، ثم توصية.`, html:'<div class="card"><div><div class="kicker">04 · الأهداف</div><h2>خمسة أهداف تربط النظرية بالتطبيق</h2></div>\n<div class="steps"><div class="step"><b>01</b><h3>فهم الواجهات التكيفية</h3><p class="muted">وتحديد علاقتها بتجربة المستخدم والاحتفاظ.</p></div>\n<div class="step"><b>02</b><h3>تحليل التسرب المبكر</h3><p class="muted">وفهم دور الواجهات التقليدية في المراحل الأولى.</p></div>\n<div class="step"><b>03</b><h3>تصميم نموذج تكيفي</h3><p class="muted">يراعي اختلاف خصائص اللاعبين.</p></div>\n<div class="step"><b>04</b><h3>تقييم النموذج</h3><p class="muted">باختبارات الاستخدام والتقييم الإرشادي.</p></div>\n</div>\n<div class="panel soft"><div class="label">الهدف التطبيقي</div><h3>تقديم توصيات وإرشادات تصميمية لمطوري ألعاب الهاتف المحمول.</h3></div>\n<div class="footer-note"><span class="source">المصدر: ص 4–5</span><span>05</span></div></div>'},{title:'الأساس النظري', kicker:'لماذا يُفترض أن يفيد التكيف؟', notes:`وضّح أن النظرية تبرر لماذا يمكن لتعديل الواجهة أن يقلل الاحتكاك المعرفي أو يدعم حالة التدفق.`, html:'<div class="card"><div><div class="kicker">05 · الإطار النظري</div><h2>نظرية العبء المعرفي + نظرية التدفق</h2></div>\n<div class="grid2"><div class="panel soft"><div class="label">نظرية العبء المعرفي</div><h3>الذاكرة العاملة محدودة</h3><p class="muted">زيادة المعلومات أو التعقيد غير الضروري قد ترفع العبء المعرفي الدخيل. الواجهة التكيفية تقترح تبسيط العرض وإظهار المساعدة عند الحاجة.</p><div class="tags"><span class="tag">تبسيط</span><span class="tag">إبراز المهم</span><span class="tag">إرشاد عند الحاجة</span></div></div>\n<div class="panel"><div class="label">نظرية التدفق</div><h3>الحفاظ على توازن التحدي والمهارة</h3><p class="muted">اختلال التوازن قد يؤدي إلى إحباط أو ملل. تعديل واجهة المستخدم يمكن أن يدعم تجربة أكثر استجابة أثناء اللعب.</p><div class="tags"><span class="tag">استجابة</span><span class="tag">دعم</span><span class="tag">تقليل تدريجي للمساعدة</span></div></div></div>\n<div class="callout"><p class="quote">الدراسة لا تغيّر صعوبة اللعبة نفسها؛ بل تغيّر الطريقة التي تُعرض بها واجهة المستخدم استجابةً للأداء.</p></div>\n<div class="footer-note"><span class="source">المصدر: ص 8–10</span><span>06</span></div></div>'},{title:'الدراسات السابقة', kicker:'أين تقف الدراسة بين الأعمال السابقة؟', notes:`لا تخلط بين ما فعلته الدراسات وما فعلته دراستك. هذا تمهيد للفجوة، وليس مكانًا لشرح كل دراسة بالتفصيل.`, html:'<div class="card"><div><div class="kicker">06 · الدراسات السابقة</div><h2>الأدبيات تدعم التخصيص، لكن بتركيزات مختلفة</h2></div>\n<table class="matrix"><thead><tr><th>الدراسة</th><th>المحور</th><th>النتيجة/الدور كما عرضه البحث</th></tr></thead>\n<tbody><tr><td>Putkonen (2022)</td><td>سلوك اليوم الأول والاحتفاظ</td><td>التخصيص المبكر وسلوك اللاعب من العوامل المؤثرة في الاستمرار.</td></tr>\n<tr><td>Tondello (2019)</td><td>التخصيص الديناميكي</td><td>تكييف التجربة وفق خصائص المستخدم يدعم التفاعل والاحتفاظ.</td></tr>\n<tr><td>Padte (2019)</td><td>التغذية الراجعة النصية</td><td>الرسائل المخصصة تزيد الاندماج والاستمرار.</td></tr>\n<tr><td>Makris (2016)</td><td>التكيف وقت التشغيل</td><td>التكيف يحسن التجربة مع الحاجة إلى آليات قرار دقيقة.</td></tr>\n<tr><td>Chen et al. (2021)</td><td>بيانات الأداء والانسحاب</td><td>التدخل المبكر وتخصيص التجربة يسهمان في تحسين الاحتفاظ.</td></tr></tbody></table>\n<div class="footer-note"><span class="source">المصدر: ص 11</span><span>07</span></div></div>'},{title:'الفجوة البحثية', kicker:'ما الذي بقي غير معالج مباشرة؟', notes:`هذه الشريحة مهمة أمام اللجنة لأنها تشرح لماذا احتاجت الدراسة إلى بناء النموذج بدل الاكتفاء بمراجعة الأدبيات.`, html:'<div class="card"><div><div class="kicker">07 · الفجوة</div><h2>من سلوك اللاعب العام إلى تكييف عناصر الواجهة نفسها</h2></div>\n<div class="grid2"><div class="panel"><div class="label">تركيز غالب سابق</div><div class="list"><div class="item">تحليل سلوك اللاعبين</div><div class="item">التنبؤ بالاحتفاظ أو الانسحاب</div><div class="item">تخصيص تجربة اللعب بصورة عامة</div></div></div>\n<div class="panel good"><div class="label">المساحة التي تستهدفها الدراسة</div><div class="list"><div class="item">تكييف عناصر UI نفسها داخل لعبة هاتف محمول</div><div class="item">قواعد بسيطة وقابلة للتطبيق وإعادة التنفيذ</div><div class="item">مقارنة مباشرة مع واجهة ثابتة</div><div class="item">تقييم قابلية الاستخدام مع أداء اللاعب</div></div></div></div>\n<div class="callout"><p class="quote">الفجوة ليست «غياب التكيف»، بل غياب التركيز المباشر على أثر تكييف واجهة المستخدم نفسها بقواعد تفاعلية بسيطة.</p></div>\n<div class="footer-note"><span class="source">المصدر: ص 11–12</span><span>08</span></div></div>'},{title:'المنهجية', kicker:'كيف صُممت المقارنة؟', notes:`أكّد هنا على منطق التحكم التجريبي؛ فهو من أقوى نقاط البحث.`, html:'<div class="card"><div><div class="kicker">08 · المنهجية</div><h2>تصميم شبه تجريبي مع ثبات جوهر اللعبة</h2></div>\n<div class="flow"><div class="flowbox"><b>متغير مستقل</b><div class="muted">نوع واجهة المستخدم</div></div><div class="arrow">←</div><div class="flowbox"><b>بيئة مشتركة</b><div class="muted">نفس اللعبة والمهام وعناصر اللعب الأساسية</div></div><div class="arrow">←</div><div class="flowbox"><b>مؤشرات تابعة</b><div class="muted">زمن المهمة، الأخطاء، التكيف، قابلية الاستخدام، نية الاستمرار</div></div></div>\n<div class="callout"><p class="quote">الهدف المنهجي: جعل الاختلاف بين النسختين ناتجًا عن تصميم الواجهة وآلية استجابتها، لا عن اختلاف محتوى اللعبة أو آلية اللعب.</p></div>\n<div class="footer-note"><span class="source">المصدر: ص 14–15</span><span>09</span></div></div>'},{title:'العينة وبيئة التطبيق', kicker:'من شارك؟ وأين؟', notes:`اذكر أن العينة متخصصة وقصدية، ولا تقدمها على أنها عينة عامة من جميع اللاعبين.`, html:'<div class="card"><div><div class="kicker">09 · العينة</div><h2>عينة قصدية من 8 مختصين</h2></div>\n<div class="grid3"><div class="panel soft center"><div><div class="big">8</div><h3>مشاركين</h3><p class="muted">من مختصي UI/UX وتطوير الألعاب.</p></div></div>\n<div class="panel"><div class="label">نوع العينة</div><h3>عينة قصدية</h3><p class="muted">اختيرت للاستفادة من خبرة المشاركين في تقييم النموذج والتصميم.</p></div>\n<div class="panel"><div class="label">بيئة التطبيق</div><h3>معسكر التقنيات الناشئة والعوالم الافتراضية</h3><p class="muted">أكاديمية طويق، المملكة العربية السعودية.</p></div></div>\n<div class="panel"><div class="label">المقارنة</div><h3>جميع المشاركين استخدموا النسختين</h3><p class="muted">وفق إجراءات موحدة لضمان عدالة المقارنة.</p></div>\n<div class="footer-note"><span class="source">المصدر: ص 2، 15</span><span>10</span></div></div>'},{title:'النموذج الأولي', kicker:'النموذج الذي حمل التجربة', notes:`لا تكثر من شرح التقنية هنا؛ ركز على أن النموذج أعطى بيئة موحدة للمقارنة العملية.`, html:'<div class="card"><div><div class="kicker">10 · النموذج الأولي</div><h2>لعبة هاتف محمول تعمل عبر متصفح الويب</h2></div>\n<div class="figure"><img src="assets/prototype-selection.jpg" alt="شاشة اختيار نسخة التجربة من البحث"><div><div class="panel"><div class="label">الشاشات الرئيسة</div><div class="list"><div class="item">شاشة البداية</div><div class="item">شاشة اختيار نمط التجربة</div><div class="item">شاشة اللعب</div><div class="item">شاشة نتائج الأداء</div><div class="item">رسائل إرشادية وفق قواعد التكيف</div></div></div><p class="source">الشكل (3-1) في البحث، ص 16. تم استخدام لقطة الشكل نفسها بصياغة عرضية.</p></div></div>\n<div class="footer-note"><span class="source">المصدر: ص 16</span><span>11</span></div></div>'},{title:'المقارنة', kicker:'نسختان، لعبة واحدة', notes:`هذه من أهم شرائح العرض بصريًا. دع اللجنة ترى الفرق بنفسها قبل أن تشرح القاعدة.`, html:'<div class="card"><div><div class="kicker">11 · واجهتان</div><h2>المتغير الحقيقي هو سلوك الواجهة</h2></div>\n<div class="compare"><div class="compare-box"><img src="assets/traditional-ui.jpg" alt="الواجهة التقليدية"><div class="txt"><div class="label">النسخة التقليدية</div><h3>ثابتة أثناء اللعب</h3><p class="muted">نفس الحجم والموقع للعناصر، بلا مساعدة أو تلميحات تكيفية.</p></div></div>\n<div class="compare-box"><img src="assets/adaptive-ui.jpg" alt="الواجهة التكيفية"><div class="txt"><div class="label">النسخة التكيفية</div><h3>تستجيب لأداء اللاعب</h3><p class="muted">تكبير عناصر مهمة، إظهار رسائل إرشادية، تقليل عناصر غير ضرورية وإبراز الأكثر استخدامًا عند الحاجة.</p></div></div></div>\n<div class="callout"><p class="quote">ثبات آلية اللعب عبر النسختين هو ما يجعل المقارنة علمية ومنضبطة.</p></div>\n<div class="footer-note"><span class="source">الأشكال (3-2) و(3-3)، ص 17–18</span><span>12</span></div></div>'},{title:'محرك التكيف', kicker:'كيف يتخذ النظام القرار؟', notes:`قل بوضوح: Rule-Based. هذه ليست شريحة AI. هذه نقطة علمية يجب ألا تلتبس.`, html:'<div class="card"><div><div class="kicker">12 · Adaptive Mechanism</div><h2>Rule-Based Adaptive Engine</h2></div>\n<div class="figure"><img src="assets/rule-engine-flow.jpg" alt="مخطط آلية اتخاذ القرار"><div><div class="callout"><p class="quote">المحرك لا يستخدم الذكاء الاصطناعي أو التعلم الآلي؛ يعتمد على قواعد منطقية If–Then محددة مسبقًا.</p></div><div class="grid2" style="margin-top:14px"><div class="panel"><div class="label">مدخلات</div><p class="muted">عدد الأخطاء، زمن التفاعل، النقرات غير الصحيحة.</p></div><div class="panel good"><div class="label">أمثلة استجابة</div><p class="muted">تكبير زر القفز، تلميحات مختصرة، تقليل عناصر بصرية، ثم إعادة الواجهة تدريجيًا.</p></div></div></div></div>\n<div class="footer-note"><span class="source">الشكل (3-4)، ص 19</span><span>13</span></div></div>'},{title:'مؤشرات الأداء', kicker:'ما الذي يسجل أثناء التجربة؟', notes:`ميّز بين «ما يقيسه النظام» وبين «ما يُفهم من النتائج». لا تحوّل أي مؤشر إلى استنتاج لم يذكره البحث.`, html:'<div class="card"><div><div class="kicker">13 · القياس</div><h2>بيانات تفاعلية مسجلة تلقائيًا</h2></div>\n<div class="grid4"><div class="panel"><div class="label">01</div><h3>عدد الأخطاء</h3><p class="muted">أثناء تنفيذ المهمة.</p></div><div class="panel"><div class="label">02</div><h3>النقرات غير الصحيحة</h3><p class="muted">Misclicks داخل النموذج.</p></div><div class="panel"><div class="label">03</div><h3>زمن إكمال المهمة</h3><p class="muted">الوقت المطلوب للإنجاز.</p></div><div class="panel"><div class="label">04</div><h3>مرات تفعيل التكيف</h3><p class="muted">عدد استدعاءات قواعد التكيف.</p></div></div>\n<div class="panel soft"><div class="label">مؤشر إضافي</div><h3>مؤشر الأداء العام</h3><p class="muted">يعرض في نهاية التجربة ضمن تقرير الأداء.</p></div>\n<div class="footer-note"><span class="source">المصدر: ص 20</span><span>14</span></div></div>'},{title:'معمارية النظام', kicker:'من التفاعل إلى استجابة الواجهة', notes:`اشرح المعمارية كحلقة، لا كخط مستقيم فقط: النظام يراقب ثم يقرر ثم يعدّل ثم يعود للمراقبة.`, html:'<div class="card"><div><div class="kicker">14 · المعمارية</div><h2>حلقة تكيف مستمرة</h2></div>\n<div class="figure"><img src="assets/system-architecture.jpg" alt="معمارية النظام"><div class="list">\n<div class="item"><div><b>1. تفاعل اللاعب</b><br><span class="muted">تسجيل الأحداث المهمة من واجهة اللعبة.</span></div></div>\n<div class="item"><div><b>2. مراقبة الأداء</b><br><span class="muted">تحليل البيانات الناتجة عن سلوك اللاعب.</span></div></div>\n<div class="item"><div><b>3. محرك القواعد</b><br><span class="muted">مقارنة المؤشرات بالشروط المعرفة مسبقًا.</span></div></div>\n<div class="item"><div><b>4. مدير الواجهة التكيفية</b><br><span class="muted">تنفيذ تعديل مناسب على عناصر UI.</span></div></div>\n<div class="item"><div><b>5. العودة إلى اللعب</b><br><span class="muted">استمرار الدورة مع تغير أداء المستخدم.</span></div></div>\n</div></div>\n<div class="footer-note"><span class="source">الشكل (3-6)، ص 21</span><span>15</span></div></div>'},{title:'إجراءات التجربة', kicker:'كيف نُفذت المقارنة؟', notes:`اذكر أن الأجهزة كانت نفسها أو متقاربة، وأن جميع المشاركين استخدموا النسختين.`, html:'<div class="card"><div><div class="kicker">15 · إجراءات التجربة</div><h2>إجراء موحد يقلل أثر العوامل الخارجية</h2></div>\n<div class="steps"><div class="step"><b>1</b><h3>اختيار النسخة</h3><p class="muted">بدء التجربة من شاشة اختيار نسخة اللعبة.</p></div><div class="step"><b>2</b><h3>تنفيذ المهمة</h3><p class="muted">المشارك ينفذ المهمة المطلوبة حتى نهايتها.</p></div><div class="step"><b>3</b><h3>تسجيل المؤشرات</h3><p class="muted">النظام يسجل الأداء تلقائيًا.</p></div><div class="step"><b>4</b><h3>التقرير النهائي</h3><p class="muted">عرض مؤشرات الأداء بعد انتهاء التجربة.</p></div></div>\n<div class="panel soft"><div class="label">في النسخة التكيفية</div><h3>تُراقب الواجهة الأداء باستمرار وتنفذ قواعد التكيف عندما تتحقق شروط محددة.</h3></div>\n<div class="footer-note"><span class="source">المصدر: ص 22–23</span><span>16</span></div></div>'},{title:'النتائج', kicker:'ماذا حدث فعليًا؟', notes:`هذه الشريحة يجب أن تكون منضبطة جدًا. لا تُظهر أرقامًا لم يوردها البحث. ركّز على ما أثبته التشغيل وما ذكرته النتائج.`, html:'<div class="card"><div><div class="kicker">16 · النتائج</div><h2>النتيجة الأساسية: نجاح التشغيل وتحسن اتجاهي في تجربة الواجهة التكيفية</h2></div>\n<div class="grid2"><div class="panel"><div class="label">ما تم إثباته وظيفيًا</div><div class="list"><div class="item">جميع مراحل النموذج تعمل كما هو مخطط.</div><div class="item">قواعد التكيف تعمل وفق الشروط المحددة مسبقًا.</div><div class="item">تسجيل مؤشرات الأداء وإظهار تقرير نهائي.</div><div class="item">عدم التأثير على منطق اللعبة الأساسي.</div></div></div>\n<div class="panel good"><div class="label">المقارنة</div><div class="list"><div class="item">الواجهة التكيفية أكثر مرونة واستجابة.</div><div class="item">البحث يذكر انخفاض الأخطاء وزمن إكمال المهمة مقارنة بالواجهة الثابتة.</div><div class="item">التقييم الإرشادي دعم بقاء اللاعب في حالة تدفق.</div><div class="item">الملخص يذكر ارتفاع نية الاستمرار في الحالة التكيفية.</div></div></div></div>\n<div class="callout"><p class="quote">لا توجد نسبة مئوية أو قيمة رقمية منشورة في متن النتائج يمكن استخدامها بأمان كرسم إحصائي؛ لذلك يُعرض الاتجاه دون اختراع أرقام.</p></div>\n<div class="footer-note"><span class="source">المصدر: ص 2، 25–28</span><span>17</span></div></div>'},{title:'المناقشة', kicker:'ماذا تعني النتيجة؟', notes:`هنا انتقل من «ماذا وجدنا؟» إلى «لماذا يبدو ذلك منطقيًا؟» دون تجاوز ما يثبته البحث.`, html:'<div class="card"><div><div class="kicker">17 · المناقشة</div><h2>التحسن الملاحظ ينسجم مع الإطار النظري</h2></div>\n<div class="grid3"><div class="panel soft"><div class="label">العبء المعرفي</div><h3>تقليل الجهد غير الضروري</h3><p class="muted">تبسيط الواجهة وإظهار الإرشاد المناسب يجعل التفاعل أكثر وضوحًا.</p></div>\n<div class="panel"><div class="label">التدفق</div><h3>استجابة تناسب حالة اللاعب</h3><p class="muted">المساعدة عند الحاجة وتقليلها عند تحسن الأداء يدعمان اندماجًا أفضل.</p></div>\n<div class="panel good"><div class="label">الدراسات السابقة</div><h3>اتجاه متوافق</h3><p class="muted">المناقشة تربط النتيجة بالأدبيات التي تدعم التخصيص والاستجابة لسلوك المستخدم.</p></div></div>\n<div class="callout"><p class="quote">المساهمة ليست تقنية تعلم آلي؛ بل تصميم طبقة واجهة تستجيب للسلوك عبر قواعد صريحة قابلة للتفسير.</p></div>\n<div class="footer-note"><span class="source">المصدر: ص 26–27</span><span>18</span></div></div>'},{title:'تحقيق الأهداف', kicker:'هل أجيب عن السؤال؟', notes:`اجعل هذه شريحة «الإجابة» لا «التلخيص». اللجنة تريد أن تعرف هل أُجيب عن السؤال فعليًا.`, html:'<div class="card"><div><div class="kicker">18 · تحقيق الأهداف</div><h2>النتيجة تعود بنا إلى سؤال البحث</h2></div>\n<div class="grid3"><div class="panel"><div class="label">تم</div><h3>تصميم نموذج أولي</h3><p class="muted">لعبة هاتف محمول تعتمد على واجهة تكيفية.</p></div>\n<div class="panel"><div class="label">تم</div><h3>تطوير آلية التكيف</h3><p class="muted">قواعد منطقية If–Then.</p></div>\n<div class="panel"><div class="label">تم</div><h3>المقارنة والتقييم</h3><p class="muted">نسختان في بيئة موحدة مع مؤشرات أداء مسجلة.</p></div></div>\n<div class="callout"><p class="quote">إجابة الدراسة: داخل بيئة النموذج الأولي، وفّرت الواجهة التكيفية تجربة أكثر مرونة مقارنة بالواجهة التقليدية من خلال تعديل عناصر الواجهة وفق أداء المستخدم.</p></div>\n<div class="footer-note"><span class="source">المصدر: ص 27–28</span><span>19</span></div></div>'},{title:'المساهمة', kicker:'ما الذي أضافته الدراسة؟', notes:`ميّز بين «المساهمة» و«التوصية». المساهمة ما أُنجز في الدراسة، لا ما يمكن فعله مستقبلًا.`, html:'<div class="card"><div><div class="kicker">19 · المساهمة</div><h2>مساهمة عملية قابلة للفهم وإعادة التنفيذ</h2></div>\n<div class="grid3"><div class="panel"><div class="big">01</div><h3>نموذج قابل للتطبيق</h3><p class="muted">بيئة لعبة ويب بمقارنة واضحة بين واجهتين.</p></div>\n<div class="panel soft"><div class="big">02</div><h3>تكيف قابل للتفسير</h3><p class="muted">قواعد صريحة تحول مؤشرات الأداء إلى استجابات واجهية.</p></div>\n<div class="panel good"><div class="big">03</div><h3>دليل عملي</h3><p class="muted">إظهار أن التكيف يمكن أن يعمل دون تغيير آلية اللعبة الأساسية.</p></div></div>\n<div class="panel"><div class="label">الخلاصة</div><h3>الواجهة يمكن أن تصبح طبقة استجابة للسلوك بدل أن تكون طبقة ثابتة فقط.</h3></div>\n<div class="footer-note"><span class="source">المصدر: ص 28، 30–31</span><span>20</span></div></div>'},{title:'الحدود والتوصيات', kicker:'قوة النتيجة ضمن حدود الدراسة', notes:`كن صريحًا في الحدود؛ هذا يزيد قوة المناقشة ولا يضعفها.`, html:'<div class="card"><div><div class="kicker">20 · الحدود والتوصيات</div><h2>النتائج واعدة، لكنها ليست بلا حدود</h2></div>\n<div class="grid2"><div class="panel warm"><div class="label">الحدود</div><div class="list"><div class="item">عينة قصدية متخصصة من 8 مشاركين.</div><div class="item">جلسة تجريبية واحدة؛ الاحتفاظ ممثل بنية الاستمرار.</div><div class="item">نموذج أولي يعمل عبر المتصفح.</div><div class="item">تطبيق ميداني في سياق محلي بالمملكة العربية السعودية.</div></div></div>\n<div class="panel soft"><div class="label">التوصيات</div><div class="list"><div class="item">تبني مفاهيم الواجهات التكيفية.</div><div class="item">توسيع التكيف ليشمل عناصر إضافية.</div><div class="item">الاستفادة من بيانات التفاعل لتحسين القواعد.</div><div class="item">قياس الرضا والتفاعل والاستمرار إلى جانب الأداء.</div><div class="item">تعزيز التعاون بين الباحثين ومطوري الألعاب.</div></div></div></div>\n<div class="footer-note"><span class="source">المصدر: ص 15، 30–31</span><span>21</span></div></div>'},{title:'الخاتمة', kicker:'الخلاصة وآفاق البحث', notes:`اختم بإجابة واحدة سهلة التذكر، ثم انتقل مباشرة إلى الأسئلة.`, html:'<div class="card"><div><div class="kicker">21 · الخاتمة</div><h2>من واجهة ثابتة إلى واجهة تستجيب للاعب</h2></div>\n<div class="grid2"><div class="callout"><p class="quote">الدراسة أثبتت إمكانية تطبيق واجهة مستخدم تكيفية قائمة على قواعد محددة مسبقًا داخل لعبة هاتف محمول، مع الحفاظ على ثبات آلية اللعب.</p></div>\n<div class="panel"><div class="label">الدراسات المستقبلية</div><div class="list"><div class="item">عينات أكبر من اللاعبين.</div><div class="item">دراسة بيئات استخدام مختلفة.</div><div class="item">تجارب مستقبلية تستخدم الذكاء الاصطناعي والتعلم الآلي.</div><div class="item">تطبيق الفكرة على أنواع أخرى من الألعاب.</div><div class="item">مقارنة أساليب تكيف مختلفة.</div></div></div></div>\n<div class="panel soft"><h3>الرسالة النهائية</h3><p class="muted">التكيف ليس بالضرورة نظامًا معقدًا؛ في هذه الدراسة يكفي أن تكون القاعدة واضحة، قابلة للتفسير، ومتصلة بسلوك اللاعب.</p></div>\n<div class="footer-note"><span class="source">المصدر: ص 30–32</span><span>22</span></div></div>'}
-];
-const stage=document.getElementById('stage'), count=document.getElementById('count'), titleEl=document.getElementById('title'), bar=document.getElementById('bar');
-const notes=document.getElementById('notes'), notesBody=document.getElementById('notesBody'), overview=document.getElementById('overview'), overviewGrid=document.getElementById('overviewGrid');
-let i=0;
+// حالة العرض
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
 
-slides.forEach((s,n)=>{
-  const el=document.createElement('section'); el.className='slide'+(n===0?' active':''); el.setAttribute('aria-label',`الشريحة ${n+1} من ${slides.length}: ${s.title}`);
-  el.innerHTML=s.html; stage.appendChild(el);
-});
-const els=[...document.querySelectorAll('.slide')];
-slides.forEach((s,n)=>{
-  const b=document.createElement('button'); b.className='ov'; b.innerHTML=`<strong>${String(n+1).padStart(2,'0')}</strong><span>${s.title}</span>`;
-  b.onclick=()=>{go(n);overview.classList.add('hidden')};
-  overviewGrid.appendChild(b);
-});
-function esc(v){return v.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));}
-function render(){
-  els.forEach((e,n)=>e.classList.toggle('active',n===i));
-  count.textContent=`${String(i+1).padStart(2,'0')} / ${String(slides.length).padStart(2,'0')}`;
-  titleEl.textContent=slides[i].title; bar.style.width=`${((i+1)/slides.length)*100}%`;
-  notesBody.innerHTML=`<div><div class="label">عنوان الشريحة</div><strong>${esc(slides[i].title)}</strong></div><hr style="border:0;border-top:1px solid rgba(255,255,255,.12);margin:16px 0"><div><div class="label">ملاحظات</div>${esc(slides[i].notes).replace(/\n/g,'<br>')}</div>`;
+// عناصر الواجهة
+const progressBar = document.getElementById('progress-bar');
+const currentSlideNumEl = document.getElementById('current-slide-num');
+const totalSlidesNumEl = document.getElementById('total-slides-num');
+const notesPanel = document.getElementById('notes-panel');
+const currentNotesEl = document.getElementById('current-notes');
+
+// التهيئة الأولى
+function init() {
+    totalSlidesNumEl.innerText = totalSlides;
+    updateSlide();
 }
-function go(n){i=Math.max(0,Math.min(slides.length-1,n));render();}
-function next(){go(i+1)} function prev(){go(i-1)}
-function toggleNotes(force){const on=force??!notes.classList.contains('open');notes.classList.toggle('open',on);}
-document.getElementById('next').onclick=next; document.getElementById('prev').onclick=prev;
-document.getElementById('notesBtn').onclick=()=>toggleNotes(); document.getElementById('closeNotes').onclick=()=>toggleNotes(false);
-document.getElementById('overviewBtn').onclick=()=>overview.classList.remove('hidden'); document.getElementById('closeOverview').onclick=()=>overview.classList.add('hidden');
-document.getElementById('fsBtn').onclick=async()=>{try{if(!document.fullscreenElement)await document.documentElement.requestFullscreen();else await document.exitFullscreen();}catch(e){}};
-document.addEventListener('keydown',e=>{
-  if(['ArrowLeft','ArrowDown',' '].includes(e.key)){e.preventDefault();next();}
-  if(['ArrowRight','ArrowUp'].includes(e.key)){e.preventDefault();prev();}
-  if(e.key==='Home'){e.preventDefault();go(0)} if(e.key==='End'){e.preventDefault();go(slides.length-1)}
-  if(e.key.toLowerCase()==='n')toggleNotes(); if(e.key.toLowerCase()==='o')overview.classList.remove('hidden');
-  if(e.key.toLowerCase()==='f')document.getElementById('fsBtn').click();
-  if(e.key==='Escape'){notes.classList.remove('open');overview.classList.add('hidden');}
+
+// تحديث الشريحة النشطة
+function updateSlide() {
+    // إخفاء جميع الشرائح
+    slides.forEach(slide => slide.classList.remove('active'));
+    
+    // إظهار الشريحة الحالية
+    slides[currentSlideIndex].classList.add('active');
+    
+    // تحديث العداد وشريط التقدم
+    currentSlideNumEl.innerText = currentSlideIndex + 1;
+    const progress = ((currentSlideIndex) / (totalSlides - 1)) * 100;
+    progressBar.style.width = `${progress}%`;
+
+    // تحديث ملاحظات المتحدث
+    updateSpeakerNotes();
+}
+
+// الشريحة التالية
+function nextSlide() {
+    if (currentSlideIndex < totalSlides - 1) {
+        currentSlideIndex++;
+        updateSlide();
+    }
+}
+
+// الشريحة السابقة
+function prevSlide() {
+    if (currentSlideIndex > 0) {
+        currentSlideIndex--;
+        updateSlide();
+    }
+}
+
+// ملاحظات المتحدث
+function updateSpeakerNotes() {
+    const activeSlide = slides[currentSlideIndex];
+    const notesEl = activeSlide.querySelector('.speaker-notes');
+    if (notesEl) {
+        currentNotesEl.innerText = notesEl.innerText;
+    } else {
+        currentNotesEl.innerText = "لا توجد ملاحظات لهذه الشريحة.";
+    }
+}
+
+function toggleNotes() {
+    if (notesPanel.style.display === 'block') {
+        notesPanel.style.display = 'none';
+    } else {
+        notesPanel.style.display = 'block';
+    }
+}
+
+// ملء الشاشة
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => {
+            console.log(`Error attempting to enable full-screen mode: ${err.message}`);
+        });
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+}
+
+// اختصارات لوحة المفاتيح (Keyboard Navigation)
+window.addEventListener('keydown', (e) => {
+    switch(e.key) {
+        case 'ArrowLeft': 
+        case 'ArrowUp':
+        case 'PageUp':
+            // بما أن العرض RTL، السهم الأيسر يعود للشريحة السابقة
+            prevSlide();
+            break;
+        case 'ArrowRight':
+        case 'ArrowDown':
+        case 'PageDown':
+        case ' ': // Spacebar
+            // السهم الأيمن ينتقل للشريحة التالية
+            nextSlide();
+            break;
+        case 'Home':
+            currentSlideIndex = 0;
+            updateSlide();
+            break;
+        case 'End':
+            currentSlideIndex = totalSlides - 1;
+            updateSlide();
+            break;
+        case 'f':
+        case 'F':
+            toggleFullscreen();
+            break;
+        case 'n':
+        case 'N':
+            toggleNotes();
+            break;
+    }
 });
-let sx=null; stage.addEventListener('touchstart',e=>sx=e.changedTouches[0].clientX,{passive:true});
-stage.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)dx<0?next():prev();sx=null;});
-render();
+
+// تشغيل التهيئة
+init();
