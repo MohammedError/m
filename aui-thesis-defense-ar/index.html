@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>أثر واجهات المستخدم التكيفية على معدل احتفاظ اللاعبين</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">AUI</div>
+      <div>
+        <div class="brand-title">مناقشة بحث الماجستير</div>
+        <div class="brand-sub">EMIX · 2026</div>
+      </div>
+    </div>
+    <div class="actions">
+      <button id="overviewBtn" class="ghost" title="نظرة عامة (O)">نظرة عامة</button>
+      <button id="notesBtn" class="icon" title="ملاحظات المقدم (N)">N</button>
+      <button id="fsBtn" class="icon" title="ملء الشاشة (F)">⛶</button>
+    </div>
+  </header>
+
+  <main id="stage" class="stage"></main>
+
+  <div id="overview" class="overlay hidden">
+    <div class="overlay-card">
+      <div class="overlay-head"><strong>نظرة عامة على العرض</strong><button id="closeOverview" class="icon">×</button></div>
+      <div id="overviewGrid" class="overview-grid"></div>
+    </div>
+  </div>
+
+  <aside id="notes" class="notes">
+    <div class="notes-head"><span>ملاحظات المقدم</span><button id="closeNotes" class="icon">×</button></div>
+    <div id="notesBody" class="notes-body"></div>
+  </aside>
+
+  <footer class="footer">
+    <button id="prev" class="nav">السابق</button>
+    <div class="meter">
+      <div class="meta"><span id="count">01 / 22</span><span id="title">العنوان</span></div>
+      <div class="track"><div id="bar" class="bar"></div></div>
+    </div>
+    <button id="next" class="nav">التالي</button>
+  </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
