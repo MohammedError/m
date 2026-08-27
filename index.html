@@ -1,51 +1,296 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>أثر واجهات المستخدم التكيفية على معدل احتفاظ اللاعبين</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مناقشة رسالة ماجستير - محمد العوفي</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- استخدام خطوط جوجل الاحترافية -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="shell">
-  <header class="topbar">
-    <div class="brand">
-      <div class="brand-mark">AUI</div>
-      <div>
-        <div class="brand-title">مناقشة بحث الماجستير</div>
-        <div class="brand-sub">EMIX · 2026</div>
-      </div>
-    </div>
-    <div class="actions">
-      <button id="overviewBtn" class="ghost" title="نظرة عامة (O)">نظرة عامة</button>
-      <button id="notesBtn" class="icon" title="ملاحظات المقدم (N)">N</button>
-      <button id="fsBtn" class="icon" title="ملء الشاشة (F)">⛶</button>
-    </div>
-  </header>
 
-  <main id="stage" class="stage"></main>
-
-  <div id="overview" class="overlay hidden">
-    <div class="overlay-card">
-      <div class="overlay-head"><strong>نظرة عامة على العرض</strong><button id="closeOverview" class="icon">×</button></div>
-      <div id="overviewGrid" class="overview-grid"></div>
+    <!-- واجهة التحكم (Controls) -->
+    <div class="controls-overlay" id="controls">
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="controls-bar">
+            <div class="slide-counter"><span id="current-slide-num">1</span> / <span id="total-slides-num">10</span></div>
+            <div class="control-buttons">
+                <button onclick="prevSlide()" title="الشريحة السابقة (السهم الأيمن)">&#10095;</button>
+                <button onclick="nextSlide()" title="الشريحة التالية (السهم الأيسر)">&#10094;</button>
+                <button onclick="toggleFullscreen()" title="ملء الشاشة (F)">&#x26F6;</button>
+                <button onclick="toggleNotes()" title="ملاحظات المتحدث (N)">&#9998;</button>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <aside id="notes" class="notes">
-    <div class="notes-head"><span>ملاحظات المقدم</span><button id="closeNotes" class="icon">×</button></div>
-    <div id="notesBody" class="notes-body"></div>
-  </aside>
-
-  <footer class="footer">
-    <button id="prev" class="nav">السابق</button>
-    <div class="meter">
-      <div class="meta"><span id="count">01 / 22</span><span id="title">العنوان</span></div>
-      <div class="track"><div id="bar" class="bar"></div></div>
+    <!-- لوحة ملاحظات المتحدث -->
+    <div class="speaker-notes-panel" id="notes-panel">
+        <h3>ملاحظات المتحدث:</h3>
+        <p id="current-notes">لا توجد ملاحظات لهذه الشريحة.</p>
     </div>
-    <button id="next" class="nav">التالي</button>
-  </footer>
-</div>
-<script src="script.js"></script>
+
+    <!-- حاوية الشرائح -->
+    <div class="presentation-container">
+
+        <!-- Slide 1: Cover -->
+        <section class="slide active">
+            <div class="cover-content">
+                <h4 class="university">أكاديمية أنس للفنون</h4>
+                <p class="program">ماجستير في تصميم واجهة وتجربة المستخدم وتقنيات الألعاب (EMIX)</p>
+                
+                <h1 class="thesis-title">أثر واجهات المستخدم التكيفية على معدل احتفاظ اللاعبين في ألعاب الهاتف المحمول</h1>
+                <h2 class="thesis-subtitle">The Impact of Adaptive User Interfaces on Player Retention in Mobile Games</h2>
+                
+                <div class="meta-data">
+                    <div class="meta-box">
+                        <span class="label">إعداد الباحث</span>
+                        <span class="value">محمد علي العوفي</span>
+                    </div>
+                    <div class="meta-box">
+                        <span class="label">إشراف</span>
+                        <span class="value">أ. محمد النزلي</span>
+                    </div>
+                </div>
+                <div class="date">يوليو / 2026</div>
+            </div>
+            <div class="speaker-notes">الترحيب باللجنة الكريمة. تقديم الاسم وعنوان البحث بوضوح. الإشارة إلى التخصص والبرنامج الأكاديمي (EMIX).</div>
+        </section>
+
+        <!-- Slide 2: Problem Statement -->
+        <section class="slide">
+            <div class="slide-header">
+                <span class="section-tag">01 — مشكلة البحث</span>
+                <h2>التسرب المبكر والواجهات الثابتة</h2>
+            </div>
+            <div class="slide-content dual-column">
+                <div class="column problem-card">
+                    <h3>الظاهرة (Early Churn)</h3>
+                    <p>فقدان نسبة كبيرة من اللاعبين في ألعاب (Free-to-Play) خلال الأيام الأولى، مما يهدد الاستدامة التجارية ونجاح اللعبة.</p>
+                </div>
+                <div class="column problem-card">
+                    <h3>المسبب: الواجهات التقليدية</h3>
+                    <ul class="clean-list">
+                        <li><strong>تصميم موحد (One-Size-Fits-All):</strong> لا يراعي الفروق الفردية.</li>
+                        <li><strong>اللاعب المبتدئ:</strong> يعاني من عبء معرفي زائد وصعوبة في فهم اللعب ⟵ <strong>إحباط</strong>.</li>
+                        <li><strong>اللاعب الخبير:</strong> غياب التحدي والمرونة ⟵ <strong>ملل</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="speaker-notes">التركيز هنا على الجانب التجاري وتجربة المستخدم. لماذا يترك اللاعبون اللعبة مبكراً؟ الواجهات الثابتة هي المتهم الرئيسي لأنها تعامل المبتدئ والخبير بنفس الطريقة.</div>
+        </section>
+
+        <!-- Slide 3: Theoretical Framework -->
+        <section class="slide">
+            <div class="slide-header">
+                <span class="section-tag">02 — الإطار النظري</span>
+                <h2>الأسس المعرفية لتجربة اللاعب</h2>
+            </div>
+            <div class="slide-content">
+                <div class="theory-diagram">
+                    <div class="theory-box">
+                        <h3>نظرية العبء المعرفي</h3>
+                        <p class="author">(Cognitive Load Theory - Sweller)</p>
+                        <p class="desc">تقليل "العبء المعرفي الدخيل" بتبسيط الواجهة وتقديم المعلومات تدريجياً لتقليل تشتت اللاعب الجديد.</p>
+                    </div>
+                    <div class="connector">⟷</div>
+                    <div class="theory-box">
+                        <h3>نظرية التدفق</h3>
+                        <p class="author">(Flow Theory - Csikszentmihalyi)</p>
+                        <p class="desc">الحفاظ على حالة "الاندماج الكامل" بموازنة مستوى التحدي مع مهارة اللاعب لتجنب الملل أو الإحباط.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="speaker-notes">لا تقرأ الشريحة، اشرح العلاقة: التدفق هو الهدف، والعبء المعرفي هو العائق. الواجهة التكيفية هي الجسر الذي يقلل العبء ليحافظ على التدفق.</div>
+        </section>
+
+        <!-- Slide 4: Gap & Question -->
+        <section class="slide">
+            <div class="slide-header">
+                <span class="section-tag">03 — الفجوة وأسئلة البحث</span>
+                <h2>من التحليل إلى التدخل المباشر</h2>
+            </div>
+            <div class="slide-content">
+                <div class="gap-visualization">
+                    <div class="gap-item past">
+                        <h4>الدراسات السابقة</h4>
+                        <p>ركزت على التنبؤ بالتسرب (Prediction) وتخصيص تجربة اللعب بشكل عام.</p>
+                    </div>
+                    <div class="gap-arrow">↓ الفجوة البحثية ↓</div>
+                    <div class="gap-item present highlight-box">
+                        <h4>هذا البحث</h4>
+                        <p>تطبيق عملي لتكييف عناصر واجهة المستخدم نفسها باستخدام قواعد تفاعلية قابلة للتطبيق (Rule-Based).</p>
+                    </div>
+                </div>
+                <div class="research-question">
+                    <h3>السؤال الرئيس:</h3>
+                    <p>"ما أثر استخدام واجهات المستخدم التكيفية (AUIs) على معدل احتفاظ اللاعبين في ألعاب الهاتف المحمول؟"</p>
+                </div>
+            </div>
+            <div class="speaker-notes">أشر إلى أن الدراسات السابقة كانت نظرية أو تركز على التنبؤ. بحثي يتدخل فعلياً في الواجهة لتغيير النتيجة. ثم اقرأ السؤال البحثي بوضوح.</div>
+        </section>
+
+        <!-- Slide 5: Methodology -->
+        <section class="slide">
+            <div class="slide-header">
+                <span class="section-tag">04 — المنهجية</span>
+                <h2>المنهج شبه التجريبي وتصميم العينة</h2>
+            </div>
+            <div class="slide-content dual-column">
+                <div class="column">
+                    <h3>بناء النموذج الأولي (Prototype)</h3>
+                    <ul class="clean-list">
+                        <li>لعبة تفاعلية عبر المتصفح (HTML5, CSS3, JS).</li>
+                        <li><strong>نسخة (أ):</strong> واجهة تقليدية (Static).</li>
+                        <li><strong>نسخة (ب):</strong> واجهة تكيفية (Rule-Based AUI).</li>
+                        <li>آلية اللعب متطابقة تماماً لضمان عزل المتغير المستقل (الواجهة).</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>العينة والتطبيق (Purposive Sample)</h3>
+                    <ul class="clean-list">
+                        <li><strong>المشاركون:</strong> 8 خبراء متخصصين.</li>
+                        <li><strong>الخلفية:</strong> UI/UX وتطوير الألعاب.</li>
+                        <li><strong>البيئة:</strong> معسكر التقنيات الناشئة والعوالم الافتراضية (أكاديمية طويق).</li>
+                        <li><strong>القياس:</strong> مؤشرات الأداء داخل اللعبة + التقييم الإرشادي.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="speaker-notes">ركز على أن اللعبة نفسها ثابتة، التغيير فقط في الواجهة. واذكر أن العينة متخصصة جداً (خبراء طويق) مما يعطي مصداقية عالية للتقييم الإرشادي.</div>
+        </section>
+
+        <!-- Slide 6: Architecture -->
+        <section class="slide">
+            <div class="slide-header">
+                <span class="section-tag">05 — معمارية النظام</span>
+                <h2>كيف يعمل النظام التكيفي؟ (Architecture)</h2>
+            </div>
+            <div class="slide-content">
+                <div class="architecture-diagram">
+                    <div class="arch-node player">تفاعل اللاعب</div>
+                    <div class="arch-arrow">⟷</div>
+                    <div class="arch-node ui">واجهة المستخدم</div>
+                    <div class="arch-arrow">⟷</div>
+                    <div class="arch-group core-engine">
+                        <div class="arch-node logging">جمع البيانات (Telemetry)</div>
+                        <div class="arch-arrow down">↓</div>
+                        <div class="arch-node rules highlight-node">محرك القواعد (Rule Engine)</div>
+                        <div class="arch-arrow down">↓</div>
+                        <div class="arch-node aui-manager">مدير الواجهات التكيفية</div>
+                    </div>
+                </div>
+            </div>
+            <div class="speaker-notes">اشرح التدفق: اللاعب يتفاعل، النظام يسجل البيانات (أخطاء، زمن)، يرسلها لمحرك القواعد، إذا تحقق الشرط، يقوم مدير الواجهة بتغيير العناصر فوراً.</div>
+        </section>
+
+        <!-- Slide 7: Rule Engine -->
+        <section class="slide">
+            <div class="slide-header">
+                <span class="section-tag">06 — آلية التكيف (Adaptive Mechanism)</span>
+                <h2>التكيف المبني على القواعد (Rule-Based)</h2>
+            </div>
+            <div class="slide-content">
+                <div class="warning-box">
+                    <strong>تنويه علمي:</strong> النظام يعتمد على استنتاج منطقي مباشر (If-Then Rules) وليس نماذج ذكاء اصطناعي معقدة، لضمان سرعة الاستجابة وثبات الأداء.
+                </div>
+                <div class="rules-grid">
+                    <div class="rule-card">
+                        <h4>الشرط (المؤشر)</h4>
+                        <p>تكرار الأخطاء والنقرات الخاطئة</p>
+                        <hr>
+                        <h4>الإجراء التكيفي</h4>
+                        <p>تكبير زر التفاعل الأساسي (تطبيقاً لقانون Fitts).</p>
+                    </div>
+                    <div class="rule-card">
+                        <h4>الشرط (المؤشر)</h4>
+                        <p>انخفاض مستوى الأداء وزيادة الزمن</p>
+                        <hr>
+                        <h4>الإجراء التكيفي</h4>
+                        <p>عرض تلميحات إرشادية مختصرة.</p>
+                    </div>
+                    <div class="rule-card">
+                        <h4>الشرط (المؤشر)</h4>
+                        <p>ارتفاع العبء المعرفي</p>
+                        <hr>
+                        <h4>الإجراء التكيفي</h4>
+                        <p>إخفاء العناصر البصرية غير الضرورية.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="speaker-notes">نقطة قوة البحث: النظام خفيف وسريع وقابل للتطبيق الفوري. لا نحتاج AI معقد لتخفيف العبء، القواعد المنطقية أثبتت كفاءتها. اذكر قانون فيتس كدليل علمي.</div>
+        </section>
+
+        <!-- Slide 8: Results -->
+        <section class="slide">
+            <div class="slide-header">
+                <span class="section-tag">07 — النتائج والتقييم</span>
+                <h2>مقارنة الأداء: التقليدية ضد التكيفية</h2>
+            </div>
+            <div class="slide-content">
+                <div class="results-layout">
+                    <div class="result-metric">
+                        <div class="metric-title">العبء المعرفي والأخطاء</div>
+                        <div class="metric-value positive">انخفاض ملحوظ</div>
+                        <p>الواجهة التكيفية قللت من معدلات الخطأ وزمن إنجاز المهام مقارنة بالثابتة.</p>
+                    </div>
+                    <div class="result-metric">
+                        <div class="metric-title">مؤشر الإحباط</div>
+                        <div class="metric-value positive">تراجع كبير</div>
+                        <p>استجابة الواجهة السريعة قللت من تشتت اللاعبين.</p>
+                    </div>
+                    <div class="result-metric">
+                        <div class="metric-title">استمرارية التدفق (Flow)</div>
+                        <div class="metric-value positive">توازن أفضل</div>
+                        <p>التعديل التلقائي حافظ على توافق التحدي مع مهارة اللاعب.</p>
+                    </div>
+                    <div class="result-metric highlight-metric">
+                        <div class="metric-title">نية الاحتفاظ (Retention)</div>
+                        <div class="metric-value gold">ارتفاع مباشر</div>
+                        <p>تحسن تجربة الاستخدام انعكس إيجاباً على التقييم الإرشادي للخبراء.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="speaker-notes">النتائج أكدت الفرضية: الواجهة التكيفية قللت الأخطاء والوقت، مما خفض الإحباط، وحافظ على التدفق. النتيجة النهائية: نية أعلى للبقاء في اللعبة (تقليل التسرب).</div>
+        </section>
+
+        <!-- Slide 9: Conclusion -->
+        <section class="slide">
+            <div class="slide-header">
+                <span class="section-tag">08 — الخاتمة والتوصيات</span>
+                <h2>الاستنتاجات والعمل المستقبلي</h2>
+            </div>
+            <div class="slide-content dual-column">
+                <div class="column">
+                    <h3>المساهمة العلمية والاستنتاج</h3>
+                    <ul class="clean-list">
+                        <li>إثبات جدوى (Rule-Based AUI) كحل عملي وفعال لظاهرة التسرب المبكر.</li>
+                        <li>التصميم التكيفي يقدم استجابة أعلى من التصميم الثابت دون كسر ميكانيكا اللعبة.</li>
+                        <li>عزل محرك القواعد عن منطق اللعبة يحافظ على استقرار النظام.</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>التوصيات والدراسات المستقبلية</h3>
+                    <ul class="clean-list">
+                        <li><strong>للمطورين:</strong> تبني مفاهيم واجهات المستخدم التكيفية بشكل مبكر.</li>
+                        <li><strong>توسيع النطاق:</strong> تطبيق التكيف على عناصر إضافية داخل الألعاب.</li>
+                        <li><strong>مستقبلاً:</strong> تجربة آليات التعلم الآلي (ML)، واختبارها على أنماط ألعاب مختلفة وعينات جماهيرية أوسع.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="speaker-notes">التأكيد على أن محرك القواعد منفصل عن اللعبة، مما يسهل تطبيقه للمطورين. التوصية للمستقبل هي دمج تعلم الآلة وتجربتها على ألعاب مختلفة. اختم بشكر اللجنة.</div>
+        </section>
+        
+        <!-- Slide 10: End -->
+        <section class="slide center-content">
+            <h1 class="thesis-title">شكراً لاستماعكم</h1>
+            <p>يسعدني تلقي ملاحظاتكم والإجابة على أسئلتكم.</p>
+            <div class="speaker-notes">ابتسم، خذ نفساً عميقاً، وكن مستعداً للدفاع عن بحثك.</div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
